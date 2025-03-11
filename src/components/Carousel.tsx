@@ -13,23 +13,25 @@ const Carousel = () => {
         '/images/image_three.jpg'
     ];
     const [currImg, setCurrImg] = useState(0) 
+    const [emblaRef, emblaApi] = useEmblaCarousel({}, [Fade()]);
 
-    if (currImg == -1) {
-        setCurrImg(2)
+
+    const handleBackClick = () => {
+        setCurrImg((prevImg) => (prevImg - 1 + 3) % 3)
     }
 
-    if (currImg == 3) {
-        setCurrImg(0)
+    const handleForwardClick = () => {
+        setCurrImg((prevImg) => (prevImg + 1 + 3) % 3)
     }
 
-    const handleClick = () => {
-        
-    }
-
+   
+  
     return (
         <div className="carousel">
-            <ArrowBackIos className="arrow-back" onClick = {() => {setCurrImg(currImg - 1)}}/>
-            <ArrowForwardIos className="arrow-forward" onClick = {() => {setCurrImg(currImg + 1)}}/>
+            <ArrowBackIos className="arrow-back" onClick = {handleBackClick}/>
+
+            {/* <ArrowBackIos className="arrow-back" onClick = {() => {setCurrImg(currImg - 1)}}/> */}
+            <ArrowForwardIos className="arrow-forward" onClick = {handleForwardClick}/>
             <img src={imageUrls[currImg]} alt="Image description"/>
         </div>
 )  
