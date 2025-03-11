@@ -1,6 +1,6 @@
 import './styles/App.css';
-import Header from './components/Header.tsx';
-import Carousel from './components/Carousel.tsx';
+import Header from './tsx-components/Header.tsx';
+import Carousel from './tsx-components/Carousel.tsx';
 function App() {
   return (
     <div className="App">

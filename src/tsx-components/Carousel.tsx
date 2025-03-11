@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, use } from "react";
 import '../styles/carousel.css'; 
 
 import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
 
 import useEmblaCarousel from 'embla-carousel-react'
 import Fade from 'embla-carousel-fade'
+  
 
 const Carousel = () => {
     const imageUrls: string[] = [
@@ -13,7 +14,9 @@ const Carousel = () => {
         '/images/image_three.jpg'
     ];
     const [currImg, setCurrImg] = useState(0) 
-    const [emblaRef, emblaApi] = useEmblaCarousel({}, [Fade()]);
+    
+
+    
 
 
     const handleBackClick = () => {
