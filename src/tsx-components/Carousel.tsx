@@ -16,7 +16,9 @@ const Carousel = () => {
         '/images/image_two.jpg',
         '/images/image_three.jpg'
     ];
-    const [currImg, setCurrImg] = useState(0)
+    const [currImg, setCurrImg] = useState(0) 
+  
+
 
     const handleBackClick = () => {
         setCurrImg((prevImg) => (prevImg - 1 + 3) % 3)
