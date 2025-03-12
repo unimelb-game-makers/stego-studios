@@ -22,16 +22,21 @@ const EmblaCarousel = (props) => {
     onPrevButtonClick,
     onNextButtonClick
   } = usePrevNextButtons(emblaApi, null)
+  const imageUrls: string[] = [
+    '/images/image_one.jpg',
+    '/images/image_two.jpg',
+    '/images/image_three.jpg'
+];
 
   return (
     <div className="embla carousel">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
+          {imageUrls.map((src, index) => (
             <div className="embla__slide" key={index}>
               <img
                 className="embla__slide__img"
-                src={`https://picsum.photos/600/350?v=${index}`}
+                src={src}
                 alt="Your alt text"
               />
             </div>

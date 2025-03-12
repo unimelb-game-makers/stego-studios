@@ -35,7 +35,7 @@ const Carousel = () => {
             <ArrowBackIos className="arrow-back" onClick = {handleBackClick}/>
             {/* <ArrowBackIos className="arrow-back" onClick = {() => {setCurrImg(currImg - 1)}}/> */}
             <ArrowForwardIos className="arrow-forward" onClick = {handleForwardClick}/>
-            <img src={imageUrls[currImg]} alt="Image description"/>
+            {/* <img src={imageUrls[currImg]} alt="Image description"/> */}
         </div>
       </>
 )
