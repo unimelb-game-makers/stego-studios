@@ -5,11 +5,11 @@
     align-items: center;
     padding: 0;
     margin: 0;
-    
+
     width: 100%;
     height: 100%;
     position: relative;
-  
+
 }
 
 .carousel img {
@@ -26,13 +26,10 @@
     color: white; /* Make sure the icon is visible */
     font-size: 40px; /* Adjust size if necessary */
   }
-  
 
 .carousel .arrow-back {
     left: 50px;
- 
 }
-.carousel .arrow-forward{
+.carousel .arrow-forward {
     right: 50px;
- 
 }
