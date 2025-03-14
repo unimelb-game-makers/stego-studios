@@ -32,9 +32,9 @@ const Carousel = () => {
       <>
         <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         <div className="carousel">
-            <ArrowBackIos className="arrow-back" onClick = {handleBackClick}/>
+            {/* <ArrowBackIos className="arrow-back" onClick = {handleBackClick}/> */}
             {/* <ArrowBackIos className="arrow-back" onClick = {() => {setCurrImg(currImg - 1)}}/> */}
-            <ArrowForwardIos className="arrow-forward" onClick = {handleForwardClick}/>
+            {/* <ArrowForwardIos className="arrow-forward" onClick = {handleForwardClick}/> */}
             {/* <img src={imageUrls[currImg]} alt="Image description"/> */}
         </div>
       </>

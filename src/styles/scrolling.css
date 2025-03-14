@@ -1,0 +1,32 @@
+.announcement {
+    background: green;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    font-size: 16px;
+}
+.marquee {
+    background: green;
+}
+
+.announcement-text {
+    display: flex;
+    align-items: center;
+    margin-right: 2em;
+
+}
+
+.text1 span{
+    margin-right: 2em;
+}
+
+.text2 span:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.text2 span:last-child{
+    margin-right: 1em;
+}
+
