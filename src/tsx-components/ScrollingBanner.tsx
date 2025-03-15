@@ -21,6 +21,10 @@ const ScrollingBanner = () => {
                 <span className="oval"></span>
                 <span>Games this Season</span>
             </div>
+            <div className="announcement-text text4">
+                <span className="oval"></span>
+                <span>Games this Season</span>
+            </div>
         </div>
         </Marquee>
        

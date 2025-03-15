@@ -20,8 +20,14 @@
 
 }
 
-.text1 span{
-    margin-right: 0.5em;
+/* .text1 span{
+    margin-right: 1em;
+} */
+.text1 span:not(:last-child) {
+    margin-right: 2rem;
+}
+.text1 span:last-child{
+    margin-right: 1em;
 }
 
 .text2 span:not(:last-child) {
@@ -37,6 +43,14 @@
 }
 
 .text3 span:last-child{
+    margin-right: 1em;
+}
+
+.text4 span:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.text4 span:last-child{
     margin-right: 1em;
 }
 
