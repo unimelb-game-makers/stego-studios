@@ -1,0 +1,49 @@
+.top {
+  background-color: #fbf5db;
+  margin: 0px;
+  padding: 0px;
+  height: 290px;
+  width: 100%;
+}
+
+.topBar img {
+  margin-top: 45px;
+  position: absolute;
+  left: 0;
+  width: 450px;
+  height: 300px;
+}
+
+.topSquare img {
+  position: absolute;
+  right: 0;
+  width: 340px;
+  height: 300px;
+}
+
+.middle {
+  background-color: #fbf5db;
+  margin: 0px;
+  padding: 0px;
+  height: 395px;
+  width: 100%;
+}
+
+.middleSquare img {
+  margin-top: 55px;
+  position: absolute;
+  left: 0;
+  width: 300px;
+  height: 340px;
+}
+
+
+.middleBar img {
+  margin-top: 55px;
+
+  position: absolute;
+  right: 0;
+  width: 450px;
+  height: 340px;
+  
+}

@@ -27,7 +27,6 @@ const ScrollingBanner = () => {
             </div>
         </div>
         </Marquee>
-       
     )
 
 }
