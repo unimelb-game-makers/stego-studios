@@ -1,82 +1,56 @@
-
-.top {
-  background-color: #fbf5db;
-  margin: 0px;
-  padding: 0px;
-  height: 290px;
-  width: 100%;
-  position: relative;
+.showcase {
+    background-color: #fbf5db;
 }
-.topBar {
-  position: relative;
+
+.showcase-row {
   display: flex;
-  justify-content: space-between; /* Space out the images */
-  align-items: flex-start; /* Align the images to the top */
-  padding: 0px;
 }
 
-.topBar img:nth-child(1){
-  margin-top: 45px;
-  position: relative;
-  left: 0;
-  width: 450px;
-  height: 300px;
+.showcase-left {
+    flex: 1;
+    display: flex;
+    height: 400px;
 }
 
-.topBar img:nth-child(2){
+.showcase-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    height: 400px;
+}
+
+.showcase-left img,
+.showcase-right img {
+    height: 100%;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .showcase-row {
+        flex-direction: column; /* stack columns vertically */
+    }
+    .showcase-left,
+    .showcase-right {
+      height: 20px;
+    }
+
+    .showcase-left img,
+    .showcase-right img {
+        width: 60%;
+        height: auto;
+    }
+}
+
+.showcase-left img:nth-child(2){
   /* position: fixed; */
   /* Use this as reference for the previous divs
   don't move on until this issue is resolved */
-  margin-top: 80px;
   position: absolute;
-  left: 20px;
   width: 350px;
-  height: 200px;
-
+  height: auto;
   border: 10px solid #70ac44;
   outline: 3px solid #30442c;
-  box-shadow:  -10px 15px 0 #30442c;
-
-}
-
-.topSquare img {
-  position: relative;
-  margin-top: 0px;
-  bottom: 350px;
-  left: 570px;
-  width: 340px;
-  height: 300px;
-}
-
-/* Mobile Styles (up to 390px in portrait) */
-@media (max-width: 767px) {
-  .topBar {
-    flex-direction: column; /* Align images horizontally */
-  }
-
-  .topBar img:nth-child(1) {
-    width: 60%; /* Resize the first image */
-    height: auto; /* Maintain aspect ratio */
-    position: relative;
-    bottom: 30px;
-  }
-
-  .topBar img:nth-child(2) {
-    width: 35%; /* Resize the second image */
-    height: auto; /* Maintain aspect ratio */
-    position: relative;
-    bottom: 230px;
-    right: 10px;
-    left: 40px;
-  }
-
-  .topSquare img {
-    width: 200px; /* Adjust the size of the square image */
-    height: 200px; /* Maintain aspect ratio */
-    top: -360px;
-    left: 100px;
-    position: relative;
-  }
+  box-shadow: -10px 15px 0 #30442c;
 }
 
 .middle {
@@ -102,7 +76,7 @@
   right: 0;
   width: 450px;
   height: 340px;
-  
+
 }
 
 
@@ -116,7 +90,7 @@
   border: 10px solid #70ac44;
   outline: 3px solid #30442c;
   box-shadow:  -10px 15px 0 #30442c;
- 
+
 }
 
 .bottom {
@@ -146,7 +120,7 @@
   border: 10px solid #70ac44;
   outline: 3px solid #30442c;
   box-shadow:  -10px 15px 0 #30442c;
-  
+
 }
 
 .bottomSquare img {
