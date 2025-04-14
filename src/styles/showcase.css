@@ -1,26 +1,38 @@
+
 .top {
   background-color: #fbf5db;
   margin: 0px;
   padding: 0px;
   height: 290px;
   width: 100%;
+  position: relative;
+}
+.topBar {
+  position: relative;
+  display: flex;
+  justify-content: space-between; /* Space out the images */
+  align-items: flex-start; /* Align the images to the top */
+  padding: 0px;
 }
 
 .topBar img:nth-child(1){
   margin-top: 45px;
-  position: absolute;
+  position: relative;
   left: 0;
   width: 450px;
   height: 300px;
 }
 
 .topBar img:nth-child(2){
-  margin-top: 45px;
-  position: relative;
-  left: -500px;
-  bottom: -50px;
+  /* position: fixed; */
+  /* Use this as reference for the previous divs
+  don't move on until this issue is resolved */
+  margin-top: 80px;
+  position: absolute;
+  left: 20px;
   width: 350px;
   height: 200px;
+
   border: 10px solid #70ac44;
   outline: 3px solid #30442c;
   box-shadow:  -10px 15px 0 #30442c;
@@ -28,11 +40,43 @@
 }
 
 .topSquare img {
-  position: absolute;
-  margin-top: -269px;
-  right: 0;
+  position: relative;
+  margin-top: 0px;
+  bottom: 350px;
+  left: 570px;
   width: 340px;
   height: 300px;
+}
+
+/* Mobile Styles (up to 390px in portrait) */
+@media (max-width: 767px) {
+  .topBar {
+    flex-direction: column; /* Align images horizontally */
+  }
+
+  .topBar img:nth-child(1) {
+    width: 60%; /* Resize the first image */
+    height: auto; /* Maintain aspect ratio */
+    position: relative;
+    bottom: 30px;
+  }
+
+  .topBar img:nth-child(2) {
+    width: 35%; /* Resize the second image */
+    height: auto; /* Maintain aspect ratio */
+    position: relative;
+    bottom: 230px;
+    right: 10px;
+    left: 40px;
+  }
+
+  .topSquare img {
+    width: 200px; /* Adjust the size of the square image */
+    height: 200px; /* Maintain aspect ratio */
+    top: -360px;
+    left: 100px;
+    position: relative;
+  }
 }
 
 .middle {
@@ -112,4 +156,22 @@
   width: 340px;
   height: 300px;
 
+}
+
+.creepycook {
+  position: relative;
+  top: -175px;
+  left: 460px;
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: flex-start; /* Align all child elements to the left */
+  font-size: 12px;
+}
+
+.creepycook p {
+  margin-bottom: 0px;
+}
+
+.creepybuttons {
+  margin-top: 10px;
 }
