@@ -17,100 +17,73 @@
     display: flex;
     justify-content: flex-end;
     height: 400px;
+    position: static;
 }
 
 .showcase-left img,
 .showcase-right img {
     height: 100%;
     width: auto;
+    max-width: 100%; 
+}
+.image-wrapper {
+  position: relative;
+  height: 100%;
 }
 
-@media (max-width: 768px) {
-    .showcase-row {
-        flex-direction: column; /* stack columns vertically */
-    }
-    .showcase-left,
-    .showcase-right {
-      height: 20px;
-    }
-
-    .showcase-left img,
-    .showcase-right img {
-        width: 60%;
-        height: auto;
-    }
-}
-
-.showcase-left img:nth-child(2){
-  /* position: fixed; */
-  /* Use this as reference for the previous divs
-  don't move on until this issue is resolved */
+.overlay-div {
   position: absolute;
-  width: 350px;
-  height: auto;
-  border: 10px solid #70ac44;
-  outline: 3px solid #30442c;
-  box-shadow: -10px 15px 0 #30442c;
-}
-
-.middle {
+  top: 80px;
+  right: 20px;
   background-color: #fbf5db;
-  margin: 0px;
-  padding: 0px;
-  height: 395px;
-  width: 100%;
-}
-
-.middleSquare img {
-  margin-top: -215px;
-  position: absolute;
-  left: 0;
-  width: 300px;
-  height: 340px;
-}
-
-
-.middleBar img:nth-child(1) {
-  margin-top: 55px;
-  position: absolute;
-  right: 0;
+  color: black;
+  padding: 10px;
   width: 450px;
-  height: 340px;
-
+  height: 250px;
+  border: 10px solid #e8c45c;
+  outline: 3px solid #c09c3c;
+  box-shadow:  10px 15px 0 #c09c3c;
+  z-index: 10;
+  border-radius: 4px;
 }
 
-
-.middleBar img:nth-child(2) {
+.showcase-left img:nth-child(2) {
   margin-top: 45px;
   position: relative;
-  right: -500px;
-  bottom: -60px;
-  width: 350px;
-  height: 200px;
+  left: -500px;
+  bottom: -40px;
+  width: 450px;
+  height: 250px;
   border: 10px solid #70ac44;
   outline: 3px solid #30442c;
   box-shadow:  -10px 15px 0 #30442c;
-
+  
 }
 
-.bottom {
-  background-color: #fbf5db;
-  margin: 0px;
-  padding: 0px;
-  height: 395px;
-  width: 100%;
+
+
+
+.overlay-div h1, p {
+  display: block;
+}
+.overlay-div p {
+  /* margin-bottom: 8px; */
 }
 
-.bottomBar img:nth-child(1) {
-  margin-top: 10px;
-  position: absolute;
-  left: 0;
+.second-row img:nth-child(2) {
+  margin-top: 45px;
+  position: relative;
+  left: 500px;
+  bottom: -40px;
   width: 450px;
-  height: 340px;
-
+  height: 250px;
+  border: 10px solid #70ac44;
+  outline: 3px solid #30442c;
+  box-shadow:  -10px 15px 0 #30442c;
+  
 }
 
-.bottomBar img:nth-child(2) {
+.third-row img:nth-child(3) {
   margin-top: 45px;
   position: relative;
   left: -500px;
@@ -123,14 +96,59 @@
 
 }
 
-.bottomSquare img {
-  margin-top: -270px;
-  position: absolute;
-  right: 0;
-  width: 340px;
-  height: 300px;
+@media (max-width: 768px) {
+    .showcase-row {
+        flex-direction: column; 
+    }
+    .second-row {
+      flex-direction: column-reverse;
+    }
+    .showcase-left,
+    .showcase-right {
+      /* height: 20px;
+      width: auto; */
+      height: auto; /* Let height adjust based on content */
+      width: 100%;  /* Full width of the screen */
 
+    }
+
+    .showcase-left img:nth-child(1),
+    .showcase-right img {
+        width: 100%;
+        height: auto;
+       
+    }
+
+    .showcase-left img:nth-child(2) {
+      margin-top: 45px;
+      position: relative;
+      left: -390px;
+      bottom: 20px;
+      width: 350px;
+      height: 200px;
+      border: 10px solid #70ac44;
+      outline: 3px solid #30442c;
+      box-shadow:  -10px 15px 0 #30442c;
+      
+    }
+
+
+    .second-row img:nth-child(2) {
+      margin-top: 405px;
+      position: relative;
+      left: -400px;
+      bottom: 650px;
+      width: 350px;
+      height: 200px;
+      border: 10px solid #70ac44;
+      outline: 3px solid #30442c;
+      box-shadow:  -10px 15px 0 #30442c;
+    
+    }
+   
 }
+
+
 
 .creepycook {
   position: relative;
