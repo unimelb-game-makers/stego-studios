@@ -70,8 +70,6 @@
 
     .showcase-left,
     .showcase-right {
-      /* height: 20px;
-      width: auto; */
       height: auto; /* Let height adjust based on content */
       width: 100%;  /* Full width of the screen */
     }
@@ -81,4 +79,6 @@
         width: 100%;
         height: auto;
     }
+    
+
 }

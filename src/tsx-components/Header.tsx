@@ -4,6 +4,8 @@ import Navbar from './Nav.tsx';
 
 import { BrowserRouter } from "react-router-dom";
 
+
+
 const Header = () => {
     return (
         
@@ -14,9 +16,10 @@ const Header = () => {
             </div>
 
             <div class="right">
-            <BrowserRouter>
+            {/* <BrowserRouter>
             <Navbar />
-            </BrowserRouter>
+            </BrowserRouter> */}
+            <Navbar />
             <div class="logo">
             <img src="/images/discord_logo.png" alt="Discord.png"/>
             <img src="/images/email_logo.png" alt="Grey-email.jpg"/>
