@@ -1,15 +1,7 @@
 import React from "react";
 
-
 const CreepyCook = () => {
-    return (
-        
-      <div>
+  return <div>Creepy Cook</div>;
+};
 
-      </div>
-
-
-    )
-}
-
-export default CreepyCook
+export default CreepyCook;
