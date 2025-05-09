@@ -1,10 +1,11 @@
 import React from "react";
 
 
-const CreatureArk = () => {
+const NoellesArk = () => {
     return (
         
       <div>
+        <h1>Noelles Ark</h1>
 
       </div>
 
@@ -12,4 +13,4 @@ const CreatureArk = () => {
     )
 }
 
-export default CreatureArk
+export default NoellesArk

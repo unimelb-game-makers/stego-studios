@@ -5,8 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Games from "./routes/Games.tsx";
 import Home from "./routes/Home.tsx";
-import CreatureArk from "./routes/Creatureark.tsx";
-import CreepyCook from "./routes/Creepycook.tsx";
+import NoellesArk from "./routes/NoellesArk.tsx";
+import TheLastDiner from "./routes/TheLastDiner.tsx";
 import Trackline from "./routes/Trackline.tsx";
 
 function App() {
@@ -18,8 +18,8 @@ function App() {
             <Route index element={<Home />} />
             <Route path="games">
               <Route index element={<Games />} />
-              <Route path="creatureark" element={<CreatureArk />} />
-              <Route path="creepycook" element={<CreepyCook />} />
+              <Route path="noelles-ark" element={<NoellesArk />} />
+              <Route path="the-last-diner" element={<TheLastDiner />} />
               <Route path="trackline" element={<Trackline />} />
             </Route>
             <Route path="*" element={<>Not Found Route</>} />

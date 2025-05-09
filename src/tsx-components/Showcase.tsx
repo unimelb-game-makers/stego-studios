@@ -1,6 +1,9 @@
 import React from "react";
 import '../styles/showcase.css'
 
+import {BrowserRouter, Link} from "react-router-dom"
+import Trackline from "../routes/Trackline";
+
 const Showcase = () => {
     return (
       <div className="showcase">
@@ -8,7 +11,11 @@ const Showcase = () => {
             <div className="showcase-left">
               <img src="/images/Top_Bar.png" alt="Top_Bar.png"/>
               <div className="overlay-div">
+                <Link to="/games/the-last-diner">
                 <img src="/images/creepycook.png" alt="creepycook.png"/>
+
+                </Link>
+                {/* <img src="/images/creepycook.png" alt="creepycook.png"/> */}
               </div>
             </div>
             <div className="showcase-right">
@@ -35,7 +42,10 @@ const Showcase = () => {
             <div className="showcase-right">
               <img src="/images/Middle_Bar.png" alt="Top_Bar.png"/>
               <div className="overlay-div">
+
+                <Link to="/games/trackline">
                 <img src="/images/trackline.png" alt="creepycook.png"/>
+                </Link>
               </div>
             </div>
         </div>
@@ -45,7 +55,9 @@ const Showcase = () => {
             <div className="showcase-left">
               <img src="/images/Bottom_Bar.png" alt="Top_Bar.png"/>
               <div className="overlay-div">
+                <Link to="/games/noelles-ark">
                 <img src="/images/creatureark.png" alt="creepycook.png"/>
+                </Link>
               </div>
             </div>
             <div className="showcase-right">
