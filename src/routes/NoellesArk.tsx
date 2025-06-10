@@ -1,16 +1,9 @@
-import React from "react";
-
-
 const NoellesArk = () => {
-    return (
-        
-      <div>
-        <h1>Noelles Ark</h1>
+  return (
+    <div>
+      <h1>Noelles Ark</h1>
+    </div>
+  );
+};
 
-      </div>
-
-
-    )
-}
-
-export default NoellesArk
+export default NoellesArk;

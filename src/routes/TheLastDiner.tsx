@@ -1,16 +1,9 @@
-import React from "react";
-
-
 const TheLastDiner = () => {
-    return (
-        
-      <div>
-        <h1>The Last Diner</h1>
+  return (
+    <div>
+      <h1>The Last Diner</h1>
+    </div>
+  );
+};
 
-      </div>
-
-
-    )
-}
-
-export default TheLastDiner
+export default TheLastDiner;
