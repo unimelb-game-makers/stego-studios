@@ -1,6 +1,6 @@
 import "../styles/showcase.css";
 
-import { Link } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 
 const Showcase = () => {
   return (
