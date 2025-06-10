@@ -13,7 +13,7 @@ const ShowcaseImage = ({ game }: ShowcaseImageProps) => {
         src="/images/Top_Bar.png"
         alt="Top_Bar.png"
       />
-      <div className="overlay-div">
+      <div className="showcase-overlay">
         <Link {...game.linkProps}>
           <img
             className="showcase-game-image"
