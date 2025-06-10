@@ -11,204 +11,234 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as TeamImport } from './routes/team'
-import { Route as GamesImport } from './routes/games'
-import { Route as ContactImport } from './routes/contact'
-import { Route as IndexImport } from './routes/index'
-import { Route as GamesTracklineImport } from './routes/games/trackline'
-import { Route as GamesTheLastDinerImport } from './routes/games/the-last-diner'
-import { Route as GamesNoellesArkImport } from './routes/games/noelles-ark'
+import { Route as LayoutImport } from './routes/_layout'
+import { Route as LayoutIndexImport } from './routes/_layout/index'
+import { Route as LayoutTeamImport } from './routes/_layout/team'
+import { Route as LayoutGamesImport } from './routes/_layout/games'
+import { Route as LayoutContactImport } from './routes/_layout/contact'
+import { Route as LayoutGamesTracklineImport } from './routes/_layout/games/trackline'
+import { Route as LayoutGamesTheLastDinerImport } from './routes/_layout/games/the-last-diner'
+import { Route as LayoutGamesNoellesArkImport } from './routes/_layout/games/noelles-ark'
 
 // Create/Update Routes
 
-const TeamRoute = TeamImport.update({
-  id: '/team',
-  path: '/team',
+const LayoutRoute = LayoutImport.update({
+  id: '/_layout',
   getParentRoute: () => rootRoute,
 } as any)
 
-const GamesRoute = GamesImport.update({
-  id: '/games',
-  path: '/games',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const ContactRoute = ContactImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const IndexRoute = IndexImport.update({
+const LayoutIndexRoute = LayoutIndexImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => LayoutRoute,
 } as any)
 
-const GamesTracklineRoute = GamesTracklineImport.update({
+const LayoutTeamRoute = LayoutTeamImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutGamesRoute = LayoutGamesImport.update({
+  id: '/games',
+  path: '/games',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutContactRoute = LayoutContactImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutGamesTracklineRoute = LayoutGamesTracklineImport.update({
   id: '/trackline',
   path: '/trackline',
-  getParentRoute: () => GamesRoute,
+  getParentRoute: () => LayoutGamesRoute,
 } as any)
 
-const GamesTheLastDinerRoute = GamesTheLastDinerImport.update({
+const LayoutGamesTheLastDinerRoute = LayoutGamesTheLastDinerImport.update({
   id: '/the-last-diner',
   path: '/the-last-diner',
-  getParentRoute: () => GamesRoute,
+  getParentRoute: () => LayoutGamesRoute,
 } as any)
 
-const GamesNoellesArkRoute = GamesNoellesArkImport.update({
+const LayoutGamesNoellesArkRoute = LayoutGamesNoellesArkImport.update({
   id: '/noelles-ark',
   path: '/noelles-ark',
-  getParentRoute: () => GamesRoute,
+  getParentRoute: () => LayoutGamesRoute,
 } as any)
 
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
+    '/_layout': {
+      id: '/_layout'
+      path: ''
+      fullPath: ''
+      preLoaderRoute: typeof LayoutImport
       parentRoute: typeof rootRoute
     }
-    '/contact': {
-      id: '/contact'
+    '/_layout/contact': {
+      id: '/_layout/contact'
       path: '/contact'
       fullPath: '/contact'
-      preLoaderRoute: typeof ContactImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof LayoutContactImport
+      parentRoute: typeof LayoutImport
     }
-    '/games': {
-      id: '/games'
+    '/_layout/games': {
+      id: '/_layout/games'
       path: '/games'
       fullPath: '/games'
-      preLoaderRoute: typeof GamesImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof LayoutGamesImport
+      parentRoute: typeof LayoutImport
     }
-    '/team': {
-      id: '/team'
+    '/_layout/team': {
+      id: '/_layout/team'
       path: '/team'
       fullPath: '/team'
-      preLoaderRoute: typeof TeamImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof LayoutTeamImport
+      parentRoute: typeof LayoutImport
     }
-    '/games/noelles-ark': {
-      id: '/games/noelles-ark'
+    '/_layout/': {
+      id: '/_layout/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof LayoutIndexImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/games/noelles-ark': {
+      id: '/_layout/games/noelles-ark'
       path: '/noelles-ark'
       fullPath: '/games/noelles-ark'
-      preLoaderRoute: typeof GamesNoellesArkImport
-      parentRoute: typeof GamesImport
+      preLoaderRoute: typeof LayoutGamesNoellesArkImport
+      parentRoute: typeof LayoutGamesImport
     }
-    '/games/the-last-diner': {
-      id: '/games/the-last-diner'
+    '/_layout/games/the-last-diner': {
+      id: '/_layout/games/the-last-diner'
       path: '/the-last-diner'
       fullPath: '/games/the-last-diner'
-      preLoaderRoute: typeof GamesTheLastDinerImport
-      parentRoute: typeof GamesImport
+      preLoaderRoute: typeof LayoutGamesTheLastDinerImport
+      parentRoute: typeof LayoutGamesImport
     }
-    '/games/trackline': {
-      id: '/games/trackline'
+    '/_layout/games/trackline': {
+      id: '/_layout/games/trackline'
       path: '/trackline'
       fullPath: '/games/trackline'
-      preLoaderRoute: typeof GamesTracklineImport
-      parentRoute: typeof GamesImport
+      preLoaderRoute: typeof LayoutGamesTracklineImport
+      parentRoute: typeof LayoutGamesImport
     }
   }
 }
 
 // Create and export the route tree
 
-interface GamesRouteChildren {
-  GamesNoellesArkRoute: typeof GamesNoellesArkRoute
-  GamesTheLastDinerRoute: typeof GamesTheLastDinerRoute
-  GamesTracklineRoute: typeof GamesTracklineRoute
+interface LayoutGamesRouteChildren {
+  LayoutGamesNoellesArkRoute: typeof LayoutGamesNoellesArkRoute
+  LayoutGamesTheLastDinerRoute: typeof LayoutGamesTheLastDinerRoute
+  LayoutGamesTracklineRoute: typeof LayoutGamesTracklineRoute
 }
 
-const GamesRouteChildren: GamesRouteChildren = {
-  GamesNoellesArkRoute: GamesNoellesArkRoute,
-  GamesTheLastDinerRoute: GamesTheLastDinerRoute,
-  GamesTracklineRoute: GamesTracklineRoute,
+const LayoutGamesRouteChildren: LayoutGamesRouteChildren = {
+  LayoutGamesNoellesArkRoute: LayoutGamesNoellesArkRoute,
+  LayoutGamesTheLastDinerRoute: LayoutGamesTheLastDinerRoute,
+  LayoutGamesTracklineRoute: LayoutGamesTracklineRoute,
 }
 
-const GamesRouteWithChildren = GamesRoute._addFileChildren(GamesRouteChildren)
+const LayoutGamesRouteWithChildren = LayoutGamesRoute._addFileChildren(
+  LayoutGamesRouteChildren,
+)
+
+interface LayoutRouteChildren {
+  LayoutContactRoute: typeof LayoutContactRoute
+  LayoutGamesRoute: typeof LayoutGamesRouteWithChildren
+  LayoutTeamRoute: typeof LayoutTeamRoute
+  LayoutIndexRoute: typeof LayoutIndexRoute
+}
+
+const LayoutRouteChildren: LayoutRouteChildren = {
+  LayoutContactRoute: LayoutContactRoute,
+  LayoutGamesRoute: LayoutGamesRouteWithChildren,
+  LayoutTeamRoute: LayoutTeamRoute,
+  LayoutIndexRoute: LayoutIndexRoute,
+}
+
+const LayoutRouteWithChildren =
+  LayoutRoute._addFileChildren(LayoutRouteChildren)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/contact': typeof ContactRoute
-  '/games': typeof GamesRouteWithChildren
-  '/team': typeof TeamRoute
-  '/games/noelles-ark': typeof GamesNoellesArkRoute
-  '/games/the-last-diner': typeof GamesTheLastDinerRoute
-  '/games/trackline': typeof GamesTracklineRoute
+  '': typeof LayoutRouteWithChildren
+  '/contact': typeof LayoutContactRoute
+  '/games': typeof LayoutGamesRouteWithChildren
+  '/team': typeof LayoutTeamRoute
+  '/': typeof LayoutIndexRoute
+  '/games/noelles-ark': typeof LayoutGamesNoellesArkRoute
+  '/games/the-last-diner': typeof LayoutGamesTheLastDinerRoute
+  '/games/trackline': typeof LayoutGamesTracklineRoute
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/contact': typeof ContactRoute
-  '/games': typeof GamesRouteWithChildren
-  '/team': typeof TeamRoute
-  '/games/noelles-ark': typeof GamesNoellesArkRoute
-  '/games/the-last-diner': typeof GamesTheLastDinerRoute
-  '/games/trackline': typeof GamesTracklineRoute
+  '/contact': typeof LayoutContactRoute
+  '/games': typeof LayoutGamesRouteWithChildren
+  '/team': typeof LayoutTeamRoute
+  '/': typeof LayoutIndexRoute
+  '/games/noelles-ark': typeof LayoutGamesNoellesArkRoute
+  '/games/the-last-diner': typeof LayoutGamesTheLastDinerRoute
+  '/games/trackline': typeof LayoutGamesTracklineRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
-  '/': typeof IndexRoute
-  '/contact': typeof ContactRoute
-  '/games': typeof GamesRouteWithChildren
-  '/team': typeof TeamRoute
-  '/games/noelles-ark': typeof GamesNoellesArkRoute
-  '/games/the-last-diner': typeof GamesTheLastDinerRoute
-  '/games/trackline': typeof GamesTracklineRoute
+  '/_layout': typeof LayoutRouteWithChildren
+  '/_layout/contact': typeof LayoutContactRoute
+  '/_layout/games': typeof LayoutGamesRouteWithChildren
+  '/_layout/team': typeof LayoutTeamRoute
+  '/_layout/': typeof LayoutIndexRoute
+  '/_layout/games/noelles-ark': typeof LayoutGamesNoellesArkRoute
+  '/_layout/games/the-last-diner': typeof LayoutGamesTheLastDinerRoute
+  '/_layout/games/trackline': typeof LayoutGamesTracklineRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    | '/'
+    | ''
     | '/contact'
     | '/games'
     | '/team'
+    | '/'
     | '/games/noelles-ark'
     | '/games/the-last-diner'
     | '/games/trackline'
   fileRoutesByTo: FileRoutesByTo
   to:
-    | '/'
     | '/contact'
     | '/games'
     | '/team'
+    | '/'
     | '/games/noelles-ark'
     | '/games/the-last-diner'
     | '/games/trackline'
   id:
     | '__root__'
-    | '/'
-    | '/contact'
-    | '/games'
-    | '/team'
-    | '/games/noelles-ark'
-    | '/games/the-last-diner'
-    | '/games/trackline'
+    | '/_layout'
+    | '/_layout/contact'
+    | '/_layout/games'
+    | '/_layout/team'
+    | '/_layout/'
+    | '/_layout/games/noelles-ark'
+    | '/_layout/games/the-last-diner'
+    | '/_layout/games/trackline'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  ContactRoute: typeof ContactRoute
-  GamesRoute: typeof GamesRouteWithChildren
-  TeamRoute: typeof TeamRoute
+  LayoutRoute: typeof LayoutRouteWithChildren
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  ContactRoute: ContactRoute,
-  GamesRoute: GamesRouteWithChildren,
-  TeamRoute: TeamRoute,
+  LayoutRoute: LayoutRouteWithChildren,
 }
 
 export const routeTree = rootRoute
@@ -221,40 +251,50 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/",
-        "/contact",
-        "/games",
-        "/team"
+        "/_layout"
       ]
     },
-    "/": {
-      "filePath": "index.tsx"
-    },
-    "/contact": {
-      "filePath": "contact.tsx"
-    },
-    "/games": {
-      "filePath": "games.tsx",
+    "/_layout": {
+      "filePath": "_layout.tsx",
       "children": [
-        "/games/noelles-ark",
-        "/games/the-last-diner",
-        "/games/trackline"
+        "/_layout/contact",
+        "/_layout/games",
+        "/_layout/team",
+        "/_layout/"
       ]
     },
-    "/team": {
-      "filePath": "team.tsx"
+    "/_layout/contact": {
+      "filePath": "_layout/contact.tsx",
+      "parent": "/_layout"
     },
-    "/games/noelles-ark": {
-      "filePath": "games/noelles-ark.tsx",
-      "parent": "/games"
+    "/_layout/games": {
+      "filePath": "_layout/games.tsx",
+      "parent": "/_layout",
+      "children": [
+        "/_layout/games/noelles-ark",
+        "/_layout/games/the-last-diner",
+        "/_layout/games/trackline"
+      ]
     },
-    "/games/the-last-diner": {
-      "filePath": "games/the-last-diner.tsx",
-      "parent": "/games"
+    "/_layout/team": {
+      "filePath": "_layout/team.tsx",
+      "parent": "/_layout"
     },
-    "/games/trackline": {
-      "filePath": "games/trackline.tsx",
-      "parent": "/games"
+    "/_layout/": {
+      "filePath": "_layout/index.tsx",
+      "parent": "/_layout"
+    },
+    "/_layout/games/noelles-ark": {
+      "filePath": "_layout/games/noelles-ark.tsx",
+      "parent": "/_layout/games"
+    },
+    "/_layout/games/the-last-diner": {
+      "filePath": "_layout/games/the-last-diner.tsx",
+      "parent": "/_layout/games"
+    },
+    "/_layout/games/trackline": {
+      "filePath": "_layout/games/trackline.tsx",
+      "parent": "/_layout/games"
     }
   }
 }
