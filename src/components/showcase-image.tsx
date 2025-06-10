@@ -8,10 +8,18 @@ export interface ShowcaseImageProps {
 const ShowcaseImage = ({ game }: ShowcaseImageProps) => {
   return (
     <div>
-      <img src="/images/Top_Bar.png" alt="Top_Bar.png" />
+      <img
+        className="showcase-background-image"
+        src="/images/Top_Bar.png"
+        alt="Top_Bar.png"
+      />
       <div className="overlay-div">
         <Link {...game.linkProps}>
-          <img src={game.image} alt={game.image} />
+          <img
+            className="showcase-game-image"
+            src={game.image}
+            alt={game.image}
+          />
         </Link>
       </div>{" "}
     </div>

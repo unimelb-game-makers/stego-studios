@@ -7,7 +7,11 @@ export interface ShowcaseRowProps {
 const ShowcaseDescription = ({ game }: ShowcaseRowProps) => {
   return (
     <div>
-      <img src="/images/Top_Square.png" alt="Top_square.png" />
+      <img
+        className="showcase-background-image"
+        src="/images/Top_Square.png"
+        alt="Top_square.png"
+      />
       <div className="overlay-div showcase-description">
         <h1>{game.title}</h1>
         <p>
