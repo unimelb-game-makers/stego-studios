@@ -6,9 +6,9 @@ import ShowcaseRow from "./showcase-row";
 const Showcase = () => {
   return (
     <div className="showcase">
-      <ShowcaseRow game={theLastDiner} />
-      <ShowcaseRow game={trackline} reverse={true} />
-      <ShowcaseRow game={noellesArk} />
+      <ShowcaseRow game={theLastDiner} reverse={true} />
+      <ShowcaseRow game={trackline} />
+      <ShowcaseRow game={noellesArk} reverse={true} />
     </div>
   );
 };
