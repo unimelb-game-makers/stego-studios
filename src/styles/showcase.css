@@ -2,7 +2,8 @@
   background-color: #fbf5db;
 }
 
-.showcase-row {
+.showcase-row,
+.showcase-row-reverse {
   display: flex;
 }
 
@@ -95,6 +96,10 @@
   }
 
   .showcase-row {
+    flex-direction: column-reverse;
+  }
+
+  .showcase-row-reverse {
     flex-direction: column;
   }
 
