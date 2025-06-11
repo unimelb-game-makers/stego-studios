@@ -17,17 +17,19 @@ const ShowcaseDescription = ({ game, reverse }: ShowcaseRowProps) => {
         <div
           className={`${reverse ? "showcase-description-left" : "showcase-description-right"}`}
         >
-          <h1>{game.title}</h1>
-          <p>
-            {game.tags.map((tag, index) => (
-              <span key={index}>
-                {tag}
-                {index < game.tags.length - 1 && " | "}
-              </span>
-            ))}
-          </p>
-          <p>{game.team}</p>
-          <p>{game.description}</p>
+          <div className="showcase-description">
+            <h1>{game.title}</h1>
+            <p>
+              {game.tags.map((tag, index) => (
+                <span key={index}>
+                  {tag}
+                  {index < game.tags.length - 1 && " | "}
+                </span>
+              ))}
+            </p>
+            <p>{game.team}</p>
+            <p>{game.description}</p>
+          </div>
         </div>
       </div>
     </div>

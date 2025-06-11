@@ -39,12 +39,23 @@
 
 .showcase-description-right {
   text-align: right;
-  padding: 50px;
-  color: black;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: flex-end;
 }
 
 .showcase-description-left {
   text-align: left;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.showcase-description {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
   padding: 50px;
   color: black;
 }
@@ -93,12 +104,41 @@
     max-height: 400px;
   }
 
+  .showcase-description-right {
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: flex-end;
+  }
+
+  .showcase-description-left {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .showcase-description {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    color: black;
+  }
+
   .showcase-description-left,
   .showcase-description-right {
-    padding-top: 0px;
-    padding-left: 50px;
-    padding-right: 50px;
     text-align: center;
+    display: block;
+  }
+
+  .showcase-description {
+    padding-top: 0px;
+    max-width: 800px;
+    display: block;
+    justify-content: center;
+    justify-items: center;
   }
 
   .showcase-game-image-left,
