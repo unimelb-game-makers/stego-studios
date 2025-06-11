@@ -2,9 +2,10 @@ import type { Game } from "@/types/game";
 
 export interface ShowcaseRowProps {
   game: Game;
+  reverse?: boolean;
 }
 
-const ShowcaseDescription = ({ game }: ShowcaseRowProps) => {
+const ShowcaseDescription = ({ game, reverse }: ShowcaseRowProps) => {
   return (
     <div>
       <img
@@ -12,19 +13,29 @@ const ShowcaseDescription = ({ game }: ShowcaseRowProps) => {
         src="/images/Top_Square.png"
         alt="Top_square.png"
       />
-      <div className="showcase-overlay">
-        <div className="showcase-description">
-          <h1>{game.title}</h1>
-          <p>
-            {game.tags.map((tag, index) => (
-              <span key={index}>
-                {tag}
-                {index < game.tags.length - 1 && " | "}
-              </span>
-            ))}
-          </p>
-          <p>{game.team}</p>
-          <p>{game.description}</p>
+      <div className="showcase-overlay-description">
+        <div
+          className={`${reverse ? "showcase-description-left" : "showcase-description-right"}`}
+        >
+          <div className="showcase-description">
+            <h1>{game.title}</h1>
+            <p>
+              {game.tags.map((tag, index) => (
+                <span key={index}>
+                  {tag}
+                  {index < game.tags.length - 1 && " | "}
+                </span>
+              ))}
+            </p>
+            <p>{game.team}</p>
+            <p>{game.description}</p>
+            <div
+              className={`showcase-button-holder${reverse ? "-reverse" : ""}`}
+            >
+              <button className="showcase-button">Learn More</button>
+              <button className="showcase-button">Wishlist on Steam</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

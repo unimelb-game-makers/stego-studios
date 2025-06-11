@@ -11,12 +11,20 @@ interface ShowcaseRowProps {
 
 const ShowcaseRow = ({ game, reverse }: ShowcaseRowProps) => {
   return (
-    <div className="showcase-row">
+    <div className={`${reverse ? "showcase-row-reverse" : "showcase-row"}`}>
       <div className="showcase-left">
-        {reverse ? <ShowcaseImage game={game} /> : <ShowcaseDescription game={game} />}
+        {reverse ? (
+          <ShowcaseImage game={game} reverse={reverse} />
+        ) : (
+          <ShowcaseDescription game={game} reverse={reverse} />
+        )}
       </div>
       <div className="showcase-right">
-        {reverse ? <ShowcaseDescription game={game} /> : <ShowcaseImage game={game} />}
+        {reverse ? (
+          <ShowcaseDescription game={game} reverse={reverse} />
+        ) : (
+          <ShowcaseImage game={game} reverse={reverse} />
+        )}
       </div>
     </div>
   );
