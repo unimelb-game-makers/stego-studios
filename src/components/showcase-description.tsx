@@ -2,9 +2,10 @@ import type { Game } from "@/types/game";
 
 export interface ShowcaseRowProps {
   game: Game;
+  reverse?: boolean;
 }
 
-const ShowcaseDescription = ({ game }: ShowcaseRowProps) => {
+const ShowcaseDescription = ({ game, reverse }: ShowcaseRowProps) => {
   return (
     <div>
       <img
@@ -12,8 +13,10 @@ const ShowcaseDescription = ({ game }: ShowcaseRowProps) => {
         src="/images/Top_Square.png"
         alt="Top_square.png"
       />
-      <div className="showcase-overlay">
-        <div className="showcase-description">
+      <div className="showcase-overlay-description">
+        <div
+          className={`${reverse ? "showcase-description-left" : "showcase-description-right"}`}
+        >
           <h1>{game.title}</h1>
           <p>
             {game.tags.map((tag, index) => (
