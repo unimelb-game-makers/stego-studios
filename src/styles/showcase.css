@@ -61,6 +61,32 @@
   color: black;
 }
 
+.showcase-button-holder {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.showcase-button-holder-reverse {
+  display: flex;
+  gap: 10px;
+}
+
+.showcase-button {
+  gap: 5px;
+  background-color: #70ac44;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.showcase-button:hover {
+  background-color: #5a8c36;
+  cursor: pointer;
+}
+
 .showcase-game-image-right {
   height: 15rem;
   width: auto;
