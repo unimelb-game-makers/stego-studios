@@ -1,4 +1,4 @@
-import type { Game } from "@/types/game";
+import { type Game } from "@/types/game";
 import { Link } from "@tanstack/react-router";
 
 export interface ShowcaseImageProps {
@@ -20,13 +20,13 @@ const ShowcaseImage = ({ game, reverse }: ShowcaseImageProps) => {
         >
           <Link {...game.linkProps}>
             <img
-              className="showcase-game-image"
+              className="showcase-game-image green-border"
               src={game.image}
               alt={game.image}
             />
           </Link>
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 };

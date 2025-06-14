@@ -1,6 +1,6 @@
 import type { LinkProps } from "@tanstack/react-router";
 
-export interface Game {
+interface Game {
   linkProps: LinkProps;
   title: string;
   tags: string[];
@@ -8,3 +8,5 @@ export interface Game {
   description: string;
   image: string;
 }
+
+export { type Game }

@@ -1,3 +1,6 @@
+import { GameHeader } from '@/components/game/game-header'
+import GameRow from '@/components/game/game-row'
+import { theLastDiner } from '@/data/games'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/_layout/games/the-last-diner')({
@@ -5,5 +8,22 @@ export const Route = createFileRoute('/_layout/games/the-last-diner')({
 })
 
 function RouteComponent() {
-  return <div>Hello "/games/the-last-diner"!</div>
+  return (
+    <>
+      <GameHeader
+        image="/images/the-last-diner.png"
+        title={theLastDiner.title}
+        tags={theLastDiner.tags}
+      >
+        Survival stealth game where the player is a chef gathering ingredients in a ruined city to cook a meal
+        for an eldritch god. Throughout the city are several monsters who’ll attack the player if spotted, but
+        need to be passed to gather ingredients inside of the ruined buildings. Once the player has the ingredients,
+        they can return to the kitchen and cook the ingredients into a meal to feed the eldritch god. Once fed the
+        god gives a player a powerup bonus for the remaining levels, but if not fed in time the player loses.
+      </GameHeader>
+
+      <GameRow game={theLastDiner} reverse={true} />
+      <GameRow game={theLastDiner}/>
+    </>
+  )
 }

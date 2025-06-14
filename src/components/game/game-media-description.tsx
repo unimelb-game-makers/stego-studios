@@ -1,12 +1,11 @@
 import { type Game } from "@/types/game";
-import { Link } from "@tanstack/react-router";
 
-export interface ShowcaseRowProps {
+interface GameMediaDescriptionProps {
   game: Game;
   reverse?: boolean;
 }
 
-const ShowcaseDescription = ({ game, reverse }: ShowcaseRowProps) => {
+const GameMediaDescription = ({ game, reverse }: GameMediaDescriptionProps) => {
   return (
     <div>
       <img
@@ -30,12 +29,6 @@ const ShowcaseDescription = ({ game, reverse }: ShowcaseRowProps) => {
             </p>
             <p>{game.team}</p>
             <p>{game.description}</p>
-            <div
-              className={`showcase-button-holder${reverse ? "-reverse" : ""}`}
-            >
-              <Link {...game.linkProps} className="showcase-button">Learn More &#x2197;</Link>
-              <Link {...game.linkProps} className="showcase-button">Wishlist on Steam &#x2197;</Link>
-            </div>
           </div>
         </div>
       </div>
@@ -43,4 +36,4 @@ const ShowcaseDescription = ({ game, reverse }: ShowcaseRowProps) => {
   );
 };
 
-export default ShowcaseDescription;
+export { GameMediaDescription }
