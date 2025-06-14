@@ -1,4 +1,5 @@
 import type { Game } from "@/types/game";
+import { Link } from "@tanstack/react-router";
 
 export interface ShowcaseImageProps {
   game: Game;
@@ -17,11 +18,13 @@ const ShowcaseImage = ({ game, reverse }: ShowcaseImageProps) => {
         <div
           className={`${reverse ? "showcase-game-image-right" : "showcase-game-image-left"}`}
         >
-          <img
-            className="showcase-game-image"
-            src={game.image}
-            alt={game.image}
-          />
+          <Link {...game.linkProps}>
+            <img
+              className="showcase-game-image"
+              src={game.image}
+              alt={game.image}
+            />
+          </Link>
         </div>
       </div>{" "}
     </div>

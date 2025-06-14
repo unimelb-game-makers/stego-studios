@@ -1,4 +1,5 @@
 import type { Game } from "@/types/game";
+import { Link } from "@tanstack/react-router";
 
 export interface ShowcaseRowProps {
   game: Game;
@@ -32,8 +33,8 @@ const ShowcaseDescription = ({ game, reverse }: ShowcaseRowProps) => {
             <div
               className={`showcase-button-holder${reverse ? "-reverse" : ""}`}
             >
-              <button className="showcase-button">Learn More</button>
-              <button className="showcase-button">Wishlist on Steam</button>
+              <Link {...game.linkProps} className="showcase-button">Learn More &#x2197;</Link>
+              <Link {...game.linkProps} className="showcase-button">Wishlist on Steam &#x2197;</Link>
             </div>
           </div>
         </div>
