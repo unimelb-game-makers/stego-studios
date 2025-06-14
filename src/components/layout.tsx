@@ -1,6 +1,6 @@
-import Header from "./Header.tsx";
-import Footer from "./Footer.tsx";
-import { Outlet } from "react-router-dom";
+import Header from "./header.tsx";
+import Footer from "./footer.tsx";
+import { Outlet } from "@tanstack/react-router";
 
 const Layout = () => {
   return (
