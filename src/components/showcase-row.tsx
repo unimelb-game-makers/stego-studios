@@ -2,7 +2,7 @@ import "../styles/showcase.css";
 
 import ShowcaseImage from "./showcase-image";
 import ShowcaseDescription from "./showcase-description";
-import type { Game } from "@/types/game";
+import { type Game } from "@/types/game";
 
 interface ShowcaseRowProps {
   game: Game;

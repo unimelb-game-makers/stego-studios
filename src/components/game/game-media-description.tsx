@@ -1,12 +1,12 @@
 import { type Game } from "@/types/game";
 import { Link } from "@tanstack/react-router";
 
-export interface ShowcaseRowProps {
+interface GameMediaDescriptionProps {
   game: Game;
   reverse?: boolean;
 }
 
-const ShowcaseDescription = ({ game, reverse }: ShowcaseRowProps) => {
+const GameMediaDescription = ({ game, reverse }: GameMediaDescriptionProps) => {
   return (
     <div>
       <img
@@ -43,4 +43,4 @@ const ShowcaseDescription = ({ game, reverse }: ShowcaseRowProps) => {
   );
 };
 
-export default ShowcaseDescription;
+export { GameMediaDescription }

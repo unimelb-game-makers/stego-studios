@@ -1,12 +1,12 @@
 import { type Game } from "@/types/game";
 import { Link } from "@tanstack/react-router";
 
-export interface ShowcaseImageProps {
+interface GameMediaProps {
   game: Game;
   reverse?: boolean;
 }
 
-const ShowcaseImage = ({ game, reverse }: ShowcaseImageProps) => {
+const GameMedia = ({ game, reverse }: GameMediaProps) => {
   return (
     <div>
       <img
@@ -31,4 +31,4 @@ const ShowcaseImage = ({ game, reverse }: ShowcaseImageProps) => {
   );
 };
 
-export default ShowcaseImage;
+export { GameMedia }
