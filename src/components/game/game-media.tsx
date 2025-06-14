@@ -1,5 +1,4 @@
 import { type Game } from "@/types/game";
-import { Link } from "@tanstack/react-router";
 
 interface GameMediaProps {
   game: Game;
@@ -11,22 +10,20 @@ const GameMedia = ({ game, reverse }: GameMediaProps) => {
     <div>
       <img
         className="showcase-background-image"
-        src="/images/Top_Bar.png"
-        alt="Top_Bar.png"
+        src="/images/Top_Square.png"
+        alt="Top_square.png"
       />
       <div className="showcase-overlay-image">
         <div
           className={`${reverse ? "showcase-game-image-right" : "showcase-game-image-left"}`}
         >
-          <Link {...game.linkProps}>
-            <img
-              className="showcase-game-image"
-              src={game.image}
-              alt={game.image}
-            />
-          </Link>
+          <img
+            className="showcase-game-image"
+            src={game.image}
+            alt={game.image}
+          />
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 };
