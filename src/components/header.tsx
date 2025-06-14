@@ -17,7 +17,7 @@ const Header = () => {
 
       <div className="right">
         <Navbar />
-        <div className="logo">
+        <div>
           <img
             className="logo-img"
             src="/images/discord_logo.png"
