@@ -1,5 +1,5 @@
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   display: flex;
@@ -9,6 +9,7 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #e5e7eb;
   background-color: #4cbb17;
   padding: 1px;

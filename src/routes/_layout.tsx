@@ -10,7 +10,9 @@ function RouteComponent() {
   return (
     <>
       <Header />
-      <Outlet />
+      <div className="main-content">
+        <Outlet />
+      </div>
       <Footer />
     </>
   );
