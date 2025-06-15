@@ -5,3 +5,7 @@
   text-decoration: none;
   text-transform: none;
 }
+
+.nav-link-current {
+  color: #f1c24b;
+}
