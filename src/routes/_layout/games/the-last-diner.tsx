@@ -1,5 +1,6 @@
 import { GameHeader } from '@/components/game/game-header'
 import GameRow from '@/components/game/game-row'
+import { GameGif } from '@/components/game/games-gif'
 import { theLastDiner } from '@/data/games'
 import { createFileRoute } from '@tanstack/react-router'
 
@@ -24,6 +25,9 @@ function RouteComponent() {
 
       <GameRow game={theLastDiner} reverse={true} />
       <GameRow game={theLastDiner}/>
+      <GameRow game={theLastDiner} reverse={true}/>
+
+      
     </>
   )
 }

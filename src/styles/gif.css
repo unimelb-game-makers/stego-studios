@@ -1,0 +1,14 @@
+.giffy,
+.giffy-reverse {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.giffy-reverse {
+  flex-direction: row-reverse;
+}
