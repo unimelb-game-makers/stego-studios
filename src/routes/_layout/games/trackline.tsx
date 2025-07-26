@@ -1,8 +1,6 @@
-import { PageUnderConstruction } from "@/components/page-under-construction";
 import { createFileRoute } from "@tanstack/react-router";
 import { GameHeader } from '@/components/game/game-header'
 import GameRow from '@/components/game/game-row'
-import { GameGif } from '@/components/game/games-gif'
 import { noellesArk, theLastDiner, trackline } from '@/data/games'
 export const Route = createFileRoute("/_layout/games/trackline")({
   component: RouteComponent,
