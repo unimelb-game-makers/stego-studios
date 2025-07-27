@@ -7,6 +7,16 @@
   --slide-size: 100%;
 }
 
+.embla__game {
+  /* max-width: 48rem; */
+  width: 100%;
+  margin: auto;
+  --slide-height: 50rem;
+  --slide-spacing: 1rem;
+  --slide-size: 20%;
+}
+
+/* MAIN CAROUSEL */
 .embla__viewport {
   overflow: hidden;
 }
@@ -32,6 +42,33 @@
   object-fit: cover;
 }
 
+/* GAME CAROUSEL */
+.embla__viewport__game {
+  overflow: hidden;
+}
+
+.embla__container__game {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.embla__slide__game {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+}
+
+.embla__slide__img__game {
+  display: block;
+  height: auto;
+  max-height: var(--slide-height);
+  width: 100%;
+  object-fit: cover;
+}
+
+/* BUTTONS */
 .embla__controls {
   display: grid;
   grid-template-columns: auto 1fr;

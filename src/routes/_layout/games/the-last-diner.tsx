@@ -1,3 +1,4 @@
+import { GameCarousel } from '@/components/carousel/game-carousel'
 import { GameHeader } from '@/components/game/game-header'
 import GameRow from '@/components/game/game-row'
 import { GameGif } from '@/components/game/games-gif'
@@ -27,7 +28,13 @@ function RouteComponent() {
       <GameRow game={theLastDiner}/>
       <GameRow game={theLastDiner} reverse={true}/>
 
-      
+      <GameCarousel
+        images={[
+          "/images/image_one.jpg",
+          "/images/image_two.jpg",
+          "/images/image_three.jpg",
+        ]}
+      />
     </>
   )
 }

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import ScrollingBanner from "@/components/banner";
-import Carousel from "@/components/carousel";
+import { MainCarousel } from "@/components/carousel/main-carousel";
 import Showcase from "@/components/showcase";
 
 export const Route = createFileRoute("/_layout/")({
@@ -10,7 +10,7 @@ export const Route = createFileRoute("/_layout/")({
 function RouteComponent() {
   return (
     <>
-      <Carousel />
+      <MainCarousel />
       <ScrollingBanner />
       <Showcase />
     </>
