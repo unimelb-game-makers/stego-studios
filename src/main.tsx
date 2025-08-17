@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
+import { Client } from "@notionhq/client";
 
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen";
@@ -8,10 +9,20 @@ import { routeTree } from "./routeTree.gen";
 import "./styles.css";
 import reportWebVitals from "./reportWebVitals.ts";
 
+export interface RouterContext {
+  notion: Client;
+}
+
+const notion = new Client({
+  auth: import.meta.env.NOTION_TOKEN,
+});
+
 // Create a new router instance
 const router = createRouter({
   routeTree,
-  context: {},
+  context: {
+    notion,
+  },
   defaultPreload: "intent",
   scrollRestoration: true,
   defaultStructuralSharing: true,
