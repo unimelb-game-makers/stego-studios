@@ -11,13 +11,11 @@ header {
   justify-content: space-between;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #e5e7eb;
-  background-color: #4cbb17;
+  background-color: #68ac46;
   padding: 1px;
   font-family: "Dangrek", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-weight: bold;
-  text-transform: uppercase;
   color: #1f2937;
   backdrop-filter: blur(100px);
   text-transform: none;
@@ -27,7 +25,6 @@ header {
 .title {
   margin-left: 10px;
 }
-
 
 .left {
   display: flex;
@@ -62,7 +59,6 @@ header {
   }
 }
 
-
 .overlay-cross-button {
   font-size: clamp(16px, 4vw, 100px);
   background: none;
@@ -70,7 +66,6 @@ header {
   cursor: pointer;
   color: white;
 }
-
 
 @media (max-width: 768px) {
   .right {
@@ -82,39 +77,31 @@ header {
 }
 
 .hamburger-overlay {
-  position: fixed;      
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;        
-  height: 100vh;        
-  background-color: rgba(0,0,0,0.95);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
   z-index: 100;
 }
-
-
-
 
 .logo-img {
   gap: 100px;
 }
 
-
-
 .logo-img:nth-child(1) {
   height: 50px;
   width: 50px;
   margin-right: 10px;
- 
 }
-
 
 .logo-img:nth-child(2) {
   right: 10;
   transform: scale(1.15);
   transform-origin: center;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
-
 
 /* .logo {
   display: flex;
