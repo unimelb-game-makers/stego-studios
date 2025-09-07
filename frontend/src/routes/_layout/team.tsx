@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { TeamMemberItem } from "@/components/team/team-member-item";
 import "../../styles/team.css";
 
 export const Route = createFileRoute("/_layout/team")({
@@ -16,21 +17,13 @@ function RouteComponent() {
 				<h1>Behind the team</h1>
 				<p>
 					Stego Studios is a student project of the University of Melbourne's
-					Game Makers' Club. Members are first vetted through an application
-					process and their resumes are reviewed. They are given specific roles
-					and divided into teams to simulate the environment of working in the
-					games industry
+					Game Makers' Club.
 				</p>
-				{/* <div className="further">
-					<p>
-						<strong>Jump to...</strong>
-					</p>
-					<ul>
-						<li>Noelle's Ark</li>
-						<li>The Last Diner</li>
-						<li>Trackline</li>
-					</ul>
-				</div> */}
+				<p>
+					Members are first vetted through an application process and their
+					resumes are reviewed. They are given specific roles and divided into
+					teams to simulate the environment of working in the games industry
+				</p>
 			</div>
 
 			<div className="outer-rectangle">
@@ -39,16 +32,17 @@ function RouteComponent() {
 				</div>
 			</div>
 
+			<div className="team-rocket">
+				<p>James Conrad</p>
+				<p>Lead Programmer</p>
+			</div>
+
+			<h1>Noelle's Ark</h1>
 			<div className="team">
-				<h1>Noelle's Ark</h1>
-				<p>Producer: Zimo</p>
-				<p>Lead Programmer: </p>
-				<p>Programming: </p>
-				<p>Lead Artist: </p>
-				<p>Artists: </p>
-				<p>Lead Designer: </p>
-				<p>Design: </p>
-				<p>Music: </p>
+				<TeamMemberItem name="Han" />
+				<TeamMemberItem name="Kwan" />
+				<TeamMemberItem />
+				<TeamMemberItem />
 			</div>
 			<div className="team">
 				<h1>The Last Diner</h1>
