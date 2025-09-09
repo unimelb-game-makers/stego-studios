@@ -1,16 +1,15 @@
-import React from "react";
 
 interface HamburgerButtonProps {
     isMenuOpen: boolean;
-    setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+    onClick: () => void;
 }
 
 
-function HamburgerButton( { isMenuOpen, setIsMenuOpen }: HamburgerButtonProps) {
+function HamburgerButton( { isMenuOpen, onClick }: HamburgerButtonProps) {
     return (
         <button
             className="hamburger"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={onClick}
         >
             {isMenuOpen ? "✖" : "☰"}
         </button>
@@ -18,4 +17,4 @@ function HamburgerButton( { isMenuOpen, setIsMenuOpen }: HamburgerButtonProps) {
 }
 
 
-export default HamburgerButton;
+export { HamburgerButton };

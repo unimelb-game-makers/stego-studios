@@ -62,6 +62,7 @@ header {
   }
 }
 
+
 .overlay-cross-button {
   font-size: clamp(16px, 4vw, 100px);
   background: none;
@@ -79,6 +80,19 @@ header {
     display: none;
   }
 }
+
+.hamburger-overlay {
+  position: fixed;      
+  top: 0;
+  left: 0;
+  width: 100vw;        
+  height: 100vh;        
+  background-color: rgba(0,0,0,0.95);
+  z-index: 100;
+}
+
+
+
 
 .logo-img {
   gap: 100px;

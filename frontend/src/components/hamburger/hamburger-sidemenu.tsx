@@ -1,17 +1,27 @@
 import { Link } from "@tanstack/react-router";
-import HamburgerOverlay from "./hamburger-overlay";
+
+import type { FileRouteTypes } from "../../routeTree.gen";
 
 
 interface HamburgerMenuProps {
     isMenuOpen: boolean;
-    setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+    onClick: () => void;
 }
 
-const HamburgerMenu = ({ isMenuOpen, setIsMenuOpen }: HamburgerMenuProps) => {
-    const tabs = ["Home", "About", "Games", "Team", "Contact"];
+const HamburgerMenu = ({ isMenuOpen, onClick }: HamburgerMenuProps) => {
+    
+    type Route = FileRouteTypes["to"];
+    
+    const tabs: Record<string, Route> = {
+        Home: '/',
+        Games: '/games',
+        Team: '/team',
+        Contact:  '/contact',
+    }
+    
     return (
         <>
-            {isMenuOpen && (<HamburgerOverlay></HamburgerOverlay>)}
+            {isMenuOpen && (<div className="hamburger-overlay"></div>)}
             
             <div
                 style={{
@@ -37,7 +47,7 @@ const HamburgerMenu = ({ isMenuOpen, setIsMenuOpen }: HamburgerMenuProps) => {
                     >
                     <button 
                         className="overlay-cross-button"
-                        onClick={() => setIsMenuOpen(false)}
+                        onClick={onClick}
                     >
                         ✖
                     </button>
@@ -51,22 +61,21 @@ const HamburgerMenu = ({ isMenuOpen, setIsMenuOpen }: HamburgerMenuProps) => {
                     gap: "32px", 
                 }}
                 >
-                {tabs.map((tab) => {
-                    const path = tab === "Home" ? "/" : `/${tab.toLowerCase()}`;
-                    return (
-                    <Link
-                        key={tab}
-                        to={path}
-                        onClick={() => setIsMenuOpen(false)}
-                        style={{
-                        color: "#fff",
-                        fontSize: "clamp(16px, 4vw, 100px)",
-                        textDecoration: "none",
-                        textAlign: "center",
-                        }}
-                    >
-                        {tab}
-                    </Link>
+                {Object.entries(tabs).map(([label, path]) => {
+                    return(
+                        <Link
+                            key={label}
+                            to={path}
+                            onClick={onClick}
+                            style={{
+                            color: "#fff",
+                            fontSize: "clamp(16px, 4vw, 100px)",
+                            textDecoration: "none",
+                            textAlign: "center",
+                            }}
+                        >
+                            {label}
+                        </Link>
                     )
                 })}
                 </div>
@@ -76,4 +85,4 @@ const HamburgerMenu = ({ isMenuOpen, setIsMenuOpen }: HamburgerMenuProps) => {
 
 }
 
-export default HamburgerMenu;
+export { HamburgerMenu };
