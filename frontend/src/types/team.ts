@@ -6,10 +6,6 @@ export interface Member {
   description: string;
 }
 
-export interface Team {
-  [memberName: string]: Member;
-}
+export type Team = readonly Member[];
 
-export interface Teams {
-  [teamName: string]: Team;
-}
+export type Teams = Record<string, Team>;
