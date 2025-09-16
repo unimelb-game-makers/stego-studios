@@ -44,11 +44,55 @@ header {
   padding-right: 10px;
 }
 
+.hamburger {
+  display: block;
+  padding-right: 25px;
+  position: relative;
+  z-index: 101;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* hide on desktop */
+  }
+}
+
+
+.overlay-cross-button {
+  font-size: clamp(16px, 4vw, 100px);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+
 @media (max-width: 768px) {
   .right {
     display: none;
   }
+  .overlay-cross-button {
+    display: none;
+  }
 }
+
+.hamburger-overlay {
+  position: fixed;      
+  top: 0;
+  left: 0;
+  width: 100vw;        
+  height: 100vh;        
+  background-color: rgba(0,0,0,0.95);
+  z-index: 100;
+}
+
+
+
 
 .logo-img {
   gap: 100px;
