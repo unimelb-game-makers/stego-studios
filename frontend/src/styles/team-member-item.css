@@ -1,0 +1,12 @@
+.team-member {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.team-member img {
+	width: 16rem;
+	height: 16rem;
+	border-radius: 15rem;
+}

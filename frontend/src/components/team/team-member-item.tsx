@@ -1,3 +1,5 @@
+import "../../styles/team-member-item.css";
+
 interface TeamMemberItemProps {
 	image: string;
 	name: string;
@@ -6,8 +8,10 @@ interface TeamMemberItemProps {
 
 const TeamMemberItem = ({ image, name, role }: TeamMemberItemProps) => {
 	return (
-		<div>
+		<div className="team-member">
+			<img src={image} alt={`${name}'s profile picture`} />
 			<p>{name}</p>
+			<p>{role}</p>
 		</div>
 	);
 };

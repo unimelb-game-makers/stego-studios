@@ -49,20 +49,26 @@
 	transform: scale(3);
 }
 
-.team-rocket {
-	font-family: "Inconsolata", monospace;
-	font-weight: 400;
-	vertical-align: middle;
+.team {
 	text-align: center;
 }
 
-.team {
-	/* margin: 0; */
-	/* padding: 0; */
-	font-size: 20px;
+.team-photo {
+	width: 90%;
+	height: 30rem;
+	background-image: url("/images/noelles-ark.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 4rem;
+}
+
+.team-list {
 	display: grid;
-	grid-template-columns: repeat(4, 200px);
-	background-color: #f3d06f;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+	margin-left: 2rem;
+	margin-right: 2rem;
 }
 
 .team h1 {

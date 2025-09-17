@@ -32,20 +32,34 @@ function RouteComponent() {
 				</div>
 			</div>
 
-			<div className="team-rocket">
-				<p>James Conrad</p>
-				<p>Lead Programmer</p>
-			</div>
-
-			<h1>Noelle's Ark</h1>
 			<div className="team">
-				<TeamMemberItem name="Han" />
-				<TeamMemberItem name="Kwan" />
-				<TeamMemberItem />
-				<TeamMemberItem />
+				<h1>Team Aqua - Noelle's Ark</h1>
+				<div className="team-photo" />
+				<div className="team-list">
+					<TeamMemberItem
+						image="/images/stego.png"
+						name="Han"
+						role="Producer"
+					/>
+					<TeamMemberItem
+						image="/images/stego.png"
+						name="Kwan"
+						role="Producer"
+					/>
+					<TeamMemberItem
+						image="/images/stego.png"
+						name="Iden"
+						role="Producer"
+					/>
+					<TeamMemberItem
+						image="/images/stego.png"
+						name="Alex"
+						role="Producer"
+					/>
+				</div>
 			</div>
 			<div className="team">
-				<h1>The Last Diner</h1>
+				{/* <h1>The Last Diner</h1>
 				<p>Producer: Zimo</p>
 				<p>Lead Programmer: </p>
 				<p>Programming: </p>
@@ -53,10 +67,10 @@ function RouteComponent() {
 				<p>Artists: </p>
 				<p>Lead Designer: </p>
 				<p>Design: </p>
-				<p>Music: </p>
+				<p>Music: </p> */}
 			</div>
 			<div className="team">
-				<h1>Trackline</h1>
+				{/* <h1>Trackline</h1>
 				<p>Producer: Zimo</p>
 				<p>Lead Programmer: </p>
 				<p>Programming: </p>
@@ -64,7 +78,7 @@ function RouteComponent() {
 				<p>Artists: </p>
 				<p>Lead Designer: </p>
 				<p>Design: </p>
-				<p>Music: </p>
+				<p>Music: </p> */}
 			</div>
 		</div>
 	);
