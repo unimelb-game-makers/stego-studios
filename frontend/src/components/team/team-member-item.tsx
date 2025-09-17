@@ -1,6 +1,4 @@
-import "../../styles/team-member-item.css";
-
-interface TeamMemberItemProps {
+export interface TeamMemberItemProps {
 	image: string;
 	name: string;
 	role: string;

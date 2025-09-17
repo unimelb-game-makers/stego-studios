@@ -20,10 +20,6 @@
 	margin: auto;
 }
 
-/* .further {
-	margin-top: 80px;
-} */
-
 .outer-rectangle {
 	margin-top: 100px;
 	width: 100%;
@@ -42,7 +38,7 @@
 	overflow: hidden;
 }
 
-.text {
+.year {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -53,28 +49,53 @@
 	text-align: center;
 }
 
-.team-photo {
+.team-name {
+	margin-top: 2;
+	margin-bottom: 0;
+	display: flex;
+	width: auto;
+	height: 8rem;
+	flex-direction: column;
+	justify-content: center;
+
+	color: #292605;
+	font-family: Inconsolata;
+	font-size: 4.2rem;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.team-banner {
 	width: 90%;
 	height: 30rem;
-	background-image: url("/images/noelles-ark.png");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	border-radius: 4rem;
+
+	margin: 0 auto;
 }
 
 .team-list {
+	list-style: none;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	padding: 0;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 2rem;
-	margin-left: 2rem;
-	margin-right: 2rem;
 }
 
-.team h1 {
-	margin: 10px;
+.team-member {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 1.5rem 4rem;
 }
 
-.team p {
-	margin: 0;
+.team-member img {
+	width: 16rem;
+	height: 16rem;
+	border-radius: 15rem;
 }

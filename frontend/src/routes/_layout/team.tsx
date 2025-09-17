@@ -1,10 +1,43 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { TeamMemberItem } from "@/components/team/team-member-item";
+import { TeamSection } from "@/components/team/team-section";
 import "../../styles/team.css";
 
 export const Route = createFileRoute("/_layout/team")({
 	component: RouteComponent,
 });
+
+const aquaMembers = [
+	{ image: "/images/stego.png", name: "Han", role: "Producer" },
+	{ image: "/images/stego.png", name: "Kwan", role: "Producer" },
+	{ image: "/images/stego.png", name: "Iden", role: "Producer" },
+	{ image: "/images/stego.png", name: "Alex", role: "Producer" },
+	{ image: "/images/stego.png", name: "Han", role: "Producer" },
+	{ image: "/images/stego.png", name: "Kwan", role: "Producer" },
+	{ image: "/images/stego.png", name: "Iden", role: "Producer" },
+	{ image: "/images/stego.png", name: "Alex", role: "Producer" },
+];
+
+const rocketMembers = [
+	{ image: "/images/stego.png", name: "Han", role: "Producer" },
+	{ image: "/images/stego.png", name: "Kwan", role: "Producer" },
+	{ image: "/images/stego.png", name: "Iden", role: "Producer" },
+	{ image: "/images/stego.png", name: "Alex", role: "Producer" },
+	{ image: "/images/stego.png", name: "Han", role: "Producer" },
+	{ image: "/images/stego.png", name: "Kwan", role: "Producer" },
+	{ image: "/images/stego.png", name: "Iden", role: "Producer" },
+	{ image: "/images/stego.png", name: "Alex", role: "Producer" },
+];
+
+const magmaMembers = [
+	{ image: "/images/stego.png", name: "Han", role: "Producer" },
+	{ image: "/images/stego.png", name: "Kwan", role: "Producer" },
+	{ image: "/images/stego.png", name: "Iden", role: "Producer" },
+	{ image: "/images/stego.png", name: "Alex", role: "Producer" },
+	{ image: "/images/stego.png", name: "Han", role: "Producer" },
+	{ image: "/images/stego.png", name: "Kwan", role: "Producer" },
+	{ image: "/images/stego.png", name: "Iden", role: "Producer" },
+	{ image: "/images/stego.png", name: "Alex", role: "Producer" },
+];
 
 function RouteComponent() {
 	return (
@@ -28,57 +61,32 @@ function RouteComponent() {
 
 			<div className="outer-rectangle">
 				<div className="inner-rectangle">
-					<p className="text">2024-2025 Teams</p>
+					<p className="year">2024-2025 Teams</p>
 				</div>
 			</div>
 
-			<div className="team">
-				<h1>Team Aqua - Noelle's Ark</h1>
-				<div className="team-photo" />
-				<div className="team-list">
-					<TeamMemberItem
-						image="/images/stego.png"
-						name="Han"
-						role="Producer"
-					/>
-					<TeamMemberItem
-						image="/images/stego.png"
-						name="Kwan"
-						role="Producer"
-					/>
-					<TeamMemberItem
-						image="/images/stego.png"
-						name="Iden"
-						role="Producer"
-					/>
-					<TeamMemberItem
-						image="/images/stego.png"
-						name="Alex"
-						role="Producer"
-					/>
-				</div>
+			<div>
+				<TeamSection
+					title="Team Rocket - The Last Diner"
+					bannerImage="/images/the-last-diner.png"
+					members={rocketMembers}
+				/>
 			</div>
-			<div className="team">
-				{/* <h1>The Last Diner</h1>
-				<p>Producer: Zimo</p>
-				<p>Lead Programmer: </p>
-				<p>Programming: </p>
-				<p>Lead Artist: </p>
-				<p>Artists: </p>
-				<p>Lead Designer: </p>
-				<p>Design: </p>
-				<p>Music: </p> */}
+
+			<div>
+				<TeamSection
+					title="Team Magma - Trackline"
+					bannerImage="/images/trackline.png"
+					members={magmaMembers}
+				/>
 			</div>
-			<div className="team">
-				{/* <h1>Trackline</h1>
-				<p>Producer: Zimo</p>
-				<p>Lead Programmer: </p>
-				<p>Programming: </p>
-				<p>Lead Artist: </p>
-				<p>Artists: </p>
-				<p>Lead Designer: </p>
-				<p>Design: </p>
-				<p>Music: </p> */}
+
+			<div>
+				<TeamSection
+					title="Team Aqua - Noelle's Ark"
+					bannerImage="/images/noelles-ark.png"
+					members={aquaMembers}
+				/>
 			</div>
 		</div>
 	);
