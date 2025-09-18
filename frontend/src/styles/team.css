@@ -99,3 +99,7 @@
 	height: 16rem;
 	border-radius: 15rem;
 }
+
+.team-member p {
+	margin: 0.3rem;
+}
