@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { TeamSection } from "@/components/team/team-section";
-import "../../styles/team.css";
+import "../../../styles/team.css";
 
-export const Route = createFileRoute("/_layout/team")({
+export const Route = createFileRoute("/_layout/team/")({
 	component: RouteComponent,
 });
 
@@ -43,7 +43,7 @@ function RouteComponent() {
 	return (
 		<div>
 			<div className="group-photo">
-				<img src="/images/group_photo.jpg"></img>
+				<img src="/images/group_photo.jpg" alt="group-photo"></img>
 			</div>
 			<div className="green"></div>
 			<div className="information">

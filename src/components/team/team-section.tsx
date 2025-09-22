@@ -1,5 +1,5 @@
-import { TeamMemberItem } from "@/components/team/team-member-item";
 import type { TeamMemberItemProps } from "@/components/team/team-member-item";
+import { TeamMemberItem } from "@/components/team/team-member-item";
 
 interface TeamSectionProps {
 	title: string;
@@ -16,7 +16,7 @@ const TeamSection = ({ title, bannerImage, members }: TeamSectionProps) => {
 				style={{ backgroundImage: `url(${bannerImage})` }}
 				role="img"
 			/>
-			<ul className="team-list" role="list">
+			<ul className="team-list">
 				{members.map((m) => (
 					<li key={m.name}>
 						<TeamMemberItem {...m} />
