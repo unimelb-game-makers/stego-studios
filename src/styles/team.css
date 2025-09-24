@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;700&family=Tilt+Warp&display=swap');
+
+
+
 .group-photo img {
 	height: 100%;
 	width: 100%;
@@ -102,4 +106,123 @@
 
 .team-member p {
 	margin: 0.3rem;
+}
+
+.member-page-container {
+    padding: 2rem;
+    background-image: url('/images/team_member_bars.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.member-content-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.member-card {
+    background-image: url('/images/member_card_bars.png');
+    background-color: #2d5427;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 14rem 10rem;
+    display: flex;
+    color: white;
+    position: relative;
+    min-height: 800px;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+}
+
+.member-avatar-container {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    text-align: center;
+}
+
+.member-avatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    margin-bottom: 1rem;
+}
+
+.member-role {
+    font-family: 'Tilt Warp';
+    font-size: 2.5rem;
+}
+
+.member-card-info {
+    position: absolute;
+    top: 5.5rem;
+    left: 27rem;
+}
+
+.member-card-info h1 {
+    font-family: 'Tilt Warp';
+    font-size: 5rem;
+    margin-top: 0;
+    margin-bottom: 6rem;
+}
+
+.member-details p {
+    font-family: 'Spline Sans';
+    margin-left: 2rem;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-contact {
+    font-family: 'Spline Sans';
+    display: flex;
+    align-items: center;
+		margin-left: 2rem;
+    gap: 1rem;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.discord-contact-item img {
+		margin-top: 1rem;
+    width: 40px;
+    height: 40px;
+}
+
+.email-contact-item img {
+		margin-top: 1rem;
+    width: 48px;
+    height: 48px;
+}
+
+.member-card-logo {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-color: white;
+    padding: 10px;
+    border: 5px solid black;
+}
+
+.member-card-logo img {
+    width: 120px;
+}
+
+.member-description {
+    padding: 1rem;
+    background-color: transparent;
+    color: black;
+    width: 100%;
+    box-sizing: border-box;
+		font-family: 'Spline Sans';
+		font-size: 1.8rem;
+		font-weight: 300;
 }
