@@ -4,6 +4,7 @@ interface Contact {
 }
 
 export interface Member {
+<<<<<<< HEAD
   name: string;
   role: string;
   imageUrl?: string;
@@ -11,6 +12,14 @@ export interface Member {
   contact: Contact[];
   description: string;
   personalNote: string;
+=======
+	name: string;
+	imageUrl?: string;
+	role: string;
+	skills: string;
+	contact: string[];
+	description: string;
+>>>>>>> 170c8ec (CHANGE: Made use of Iden's data + types in team page)
 }
 
 

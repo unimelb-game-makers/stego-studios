@@ -1,10 +1,9 @@
-import type { TeamMemberItemProps } from "@/components/team/team-member-item";
-import { TeamMemberItem } from "@/components/team/team-member-item";
+import type { Team } from "@/types/team";
 
 interface TeamSectionProps {
 	title: string;
 	bannerImage: string;
-	members: TeamMemberItemProps[];
+	members: Team;
 }
 
 const TeamSection = ({ title, bannerImage, members }: TeamSectionProps) => {
@@ -18,8 +17,10 @@ const TeamSection = ({ title, bannerImage, members }: TeamSectionProps) => {
 			/>
 			<ul className="team-list">
 				{members.map((m) => (
-					<li key={m.name}>
-						<TeamMemberItem {...m} />
+					<li key={m.name} className="team-member">
+						<img src={m.imageUrl ?? "/images/stego.png"} alt={m.name} />
+						<p>{m.name}</p>
+						<p>{m.role}</p>
 					</li>
 				))}
 			</ul>
