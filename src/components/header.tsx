@@ -51,7 +51,7 @@ const Header = () => {
         hidden: { y: "-100%" },
       }}
       animate={hidden ? "hidden" : "visible"}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
     >
       <div className="left" onClick={handleLogoClicked}>
         <img className="logo-img" src="/images/stego.png" alt="Stego.png" />
