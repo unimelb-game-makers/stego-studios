@@ -19,11 +19,11 @@ function RouteComponent() {
 				<p>
 					Stego Studios is a student project of the University of Melbourne's
 					Game Makers' Club.
-				</p>
-				<p>
+					<br />
+					<br />
 					Members are first vetted through an application process and their
 					resumes are reviewed. They are given specific roles and divided into
-					teams to simulate the environment of working in the games industry
+					teams to simulate the environment of working in the games industry.
 				</p>
 			</div>
 

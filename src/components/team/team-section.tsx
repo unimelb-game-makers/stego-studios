@@ -19,8 +19,11 @@ const TeamSection = ({ title, bannerImage, members }: TeamSectionProps) => {
 				{members.map((m) => (
 					<li key={m.name} className="team-member">
 						<img src={m.imageUrl ?? "/images/stego.png"} alt={m.name} />
-						<p>{m.name}</p>
-						<p>{m.role}</p>
+						<p>
+							{m.name}
+							<br />
+							{m.role}
+						</p>
 					</li>
 				))}
 			</ul>
