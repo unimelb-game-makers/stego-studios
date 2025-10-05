@@ -20,6 +20,7 @@
     "@tanstack/router-plugin": "^1.114.3",
     "embla-carousel-fade": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^12.23.22",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5"
