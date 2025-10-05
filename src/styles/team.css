@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;700&family=Tilt+Warp&display=swap');
+
+
+
 .group-photo img {
 	height: 100%;
 	width: 100%;
@@ -102,4 +106,291 @@
 
 .team-member p {
 	margin: 0.3rem;
+}
+
+.member-page-container {
+    padding: 2rem;
+    background-image: url('/images/team_member_bars.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.member-content-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.member-card {
+    background-image: url('/images/member_card_bars.png');
+    background-color: #2d5427;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    position: relative;
+    align-items: flex-start;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 10px 10px rgba(0,0,0,0.3);
+}
+
+.member-avatar-container {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.member-avatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    margin-bottom: 0;
+}
+
+.member-role {
+    font-family: 'Tilt Warp';
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.member-card-info {
+    flex-grow: 1;
+}
+
+.member-card-info .desktop-name {
+    font-family: 'Tilt Warp';
+    font-size: 5rem;
+    margin-top: 0;
+    margin-bottom: 4rem;
+    margin-left: 4rem;
+    width: fit-content;
+}
+
+.mobile-name {
+    display: none;
+}
+
+.member-details p {
+    font-family: 'Spline Sans';
+    font-size: 2rem;
+    margin: 0.5rem 0 0.5rem 4rem;
+    text-align: left;
+}
+
+.personal-note {
+    overflow-wrap: break-word;
+}
+
+.member-skills {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-family: 'Spline Sans';
+    font-size: 2rem;
+    margin: 0.5rem 0 0.5rem 4rem;
+}
+
+.skills-container {
+    display: inline;
+}
+
+.skill-tag {
+    display: inline;
+}
+
+.skill-tag:not(:last-child)::after {
+    content: ", ";
+}
+
+.member-contact {
+    font-family: 'Spline Sans';
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+    margin: 0.5rem 0 0.5rem 4rem;
+    text-align: left;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.small-contact-item, .big-contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.small-contact-item img {
+    width: 40px;
+    height: 40px;
+}
+
+.big-contact-item img {
+    width: 48px;
+    height: 48px;
+}
+
+.member-card-logo {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background-color: white;
+    padding: 10px;
+    border: 5px solid black;
+}
+
+.member-card-logo img {
+    width: 120px;
+}
+
+.member-description {
+    padding: 1rem;
+    background-color: transparent;
+    color: black;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Spline Sans';
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+/* Responsive Styles */
+
+/* Small Laptop/Big Tablet */
+@media (max-width: 1200px) {
+    .member-card {
+        gap: 1rem;
+    }
+    .member-card-info .desktop-name {
+        font-size: 4rem;
+        margin-left: 3rem;
+    }
+    .member-details p, .member-contact, .member-skills {
+        font-size: 1.8rem;
+        margin-left: 3rem;
+    }
+    .member-avatar {
+        width: 250px;
+        height: 250px;
+    }
+    .member-role {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile/Small Tablet */
+@media (max-width: 900px) {
+    .desktop-name {
+        display: none;
+    }
+
+    .mobile-name {
+        display: block;
+        font-family: 'Tilt Warp';
+        font-size: 2.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .member-card {
+        padding: 2rem 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member-avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .member-role {
+        font-size: 1.2rem;
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .member-card-info {
+        width: 100%;
+    }
+
+    .member-details {
+        text-align: left;
+    }
+
+    .member-skills, .member-contact, .member-details p {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .member-contact {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        justify-content: flex-start;
+    }
+
+    .skill-tag:not(:last-child)::after {
+        content: "";
+    }
+
+    .member-avatar-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .member-card-logo {
+        display: none;
+    }
+
+    .member-skills {
+        display: block;
+    }
+
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+    }
+
+    .skill-tag {
+        background-color: #68ac46;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .small-contact-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .big-contact-item img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .member-description {
+        font-size: 1.2rem;
+    }
+
+    .contact-icons {
+        gap: 0.4rem;
+    }
 }
