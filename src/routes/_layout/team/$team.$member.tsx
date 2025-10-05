@@ -1,33 +1,51 @@
 import { createFileRoute, Navigate } from "@tanstack/react-router";
 import { getMember } from "@/data/teams";
-import type { TeamName, MemberName } from "@/data/teams";
-import { teams } from "@/data/teams";
 import "@/styles/team.css";
+import { useEffect, useRef, useState } from "react";
 
 export const Route = createFileRoute("/_layout/team/$team/$member")({
   component: RouteComponent,
 });
 
 function RouteComponent() {
-  // const { team, member } = Route.useParams();
+  const nameRef = useRef<HTMLHeadingElement>(null);
+  const logoRef = useRef<HTMLDivElement>(null);
+  const [isColliding, setIsColliding] = useState(false);
 
-  // const memberData = getMember(
-  //   team as TeamName,
-  //   member as MemberName<keyof typeof teams>,
-  // );
+  // Check for logo-name overlap, hide logo on overlap
+  useEffect(() => {
+    const checkCollision = () => {
+      if (nameRef.current && logoRef.current) {
+        const nameRect = nameRef.current.getBoundingClientRect();
+        const logoRect = logoRef.current.getBoundingClientRect();
 
-  // if (!memberData) {
-  //   return <Navigate to="/team" />;
-  // }
+        setIsColliding(nameRect.right > logoRect.left);
+      }
+    };
 
-  const memberData = {
-    name: "James Conrad",
-    skills: ["Game Design", "Level Design", "System Design"],
-    contact: ["discord", "discord", "email"],
-    description:
-      "James Conrad is a senior game designer with over 10 years of experience. He is the creative force behind the game's mechanics and flow. He thrives on finding the sweet spot where strategy meets fun, shaping systems that challenge players without overwhelming them. With a love for puzzle-solving and world-building, James makes sure every feature connects to the bigger picture of the game. When he's not refining levels, he's usually testing new board games or sketching out his next big idea.",
-    role: "Game Designer",
-  };
+    checkCollision();
+    window.addEventListener("resize", checkCollision);
+
+    return () => {
+      window.removeEventListener("resize", checkCollision);
+    };
+  }, []);
+
+  const { team, member } = Route.useParams();
+
+  const memberData = getMember(team, member);
+
+  if (!memberData) {
+    return <Navigate to="/team" />;
+  }
+
+  const contacts = memberData.contact.reduce(
+    (acc, contact) => {
+      acc[contact.type] = contact.content;
+      return acc;
+    },
+    {} as Record<"discord" | "email" | "linkedin" | "personal", string | undefined>,
+  );
 
   return (
     <div className="member-page-container">
@@ -41,7 +59,9 @@ function RouteComponent() {
         </div>
 
         <div className="member-card-info">
-          <h1 className="desktop-name">{memberData.name}</h1>
+          <h1 ref={nameRef} className="desktop-name">
+            {memberData.name}
+          </h1>
           <div className="member-details">
             <div className="member-skills">
               <strong>skills:</strong>
@@ -56,21 +76,59 @@ function RouteComponent() {
             <div className="member-contact">
               <strong>contact:</strong>
               <div className="contact-icons">
-                <a href="#" className="discord-contact-item">
-                  <img src="/images/discord_logo.png" alt="Discord" />
-                </a>
-                <a href="#" className="email-contact-item">
-                  <img src="/images/email_logo.png" alt="Email" />
-                </a>
+                {contacts.discord && (
+                  <a
+                    href={contacts.discord}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="small-contact-item"
+                  >
+                    <img src="/images/discord_logo.png" alt="Discord" />
+                  </a>
+                )}
+                {contacts.email && (
+                  <a
+                    href={`mailto:${contacts.email}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="big-contact-item"
+                  >
+                    <img src="/images/email_logo.png" alt="Email" />
+                  </a>
+                )}
+                {contacts.linkedin && (
+                  <a
+                    href={contacts.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="small-contact-item"
+                  >
+                    <img src="/images/linkedIn_logo.png" alt="linkedIn" />
+                  </a>
+                )}
+                {contacts.personal && (
+                  <a
+                    href={contacts.personal}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="big-contact-item"
+                  >
+                    <img src="/images/www_logo.png" alt="www" />
+                  </a>
+                )}
               </div>
             </div>
-            <p>
-              <strong>personal note:</strong>
+            <p className="personal-note">
+              <strong>personal note:</strong> {memberData.personalNote}
             </p>
           </div>
         </div>
 
-        <div className="member-card-logo">
+        <div
+          ref={logoRef}
+          className="member-card-logo"
+          style={{ opacity: isColliding ? 0 : 1 }}
+        >
           <img src="/images/stego.png" alt="icon" />
         </div>
       </div>

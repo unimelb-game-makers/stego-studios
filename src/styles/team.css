@@ -170,6 +170,8 @@
     font-size: 5rem;
     margin-top: 0;
     margin-bottom: 4rem;
+    margin-left: 4rem;
+    width: fit-content;
 }
 
 .mobile-name {
@@ -179,8 +181,12 @@
 .member-details p {
     font-family: 'Spline Sans';
     font-size: 2rem;
-    margin: 0.5rem 0 0.5rem 2rem;
+    margin: 0.5rem 0 0.5rem 4rem;
     text-align: left;
+}
+
+.personal-note {
+    overflow-wrap: break-word;
 }
 
 .member-skills {
@@ -189,7 +195,7 @@
     gap: 1rem;
     font-family: 'Spline Sans';
     font-size: 2rem;
-    margin: 0.5rem 0 0.5rem 2rem;
+    margin: 0.5rem 0 0.5rem 4rem;
 }
 
 .skills-container {
@@ -210,7 +216,7 @@
     align-items: center;
     gap: 1rem;
     font-size: 2rem;
-    margin: 0.5rem 0 0.5rem 2rem;
+    margin: 0.5rem 0 0.5rem 4rem;
     text-align: left;
 }
 
@@ -219,17 +225,17 @@
     gap: 1rem;
 }
 
-.discord-contact-item, .email-contact-item {
+.small-contact-item, .big-contact-item {
     display: flex;
     align-items: center;
 }
 
-.discord-contact-item img {
+.small-contact-item img {
     width: 40px;
     height: 40px;
 }
 
-.email-contact-item img {
+.big-contact-item img {
     width: 48px;
     height: 48px;
 }
@@ -265,11 +271,13 @@
     .member-card {
         gap: 1rem;
     }
-    .member-card-info h1 {
+    .member-card-info .desktop-name {
         font-size: 4rem;
+        margin-left: 3rem;
     }
-    .member-details p, .member-contact {
+    .member-details p, .member-contact, .member-skills {
         font-size: 1.8rem;
+        margin-left: 3rem;
     }
     .member-avatar {
         width: 250px;
@@ -368,12 +376,12 @@
         font-size: 1rem;
     }
 
-    .discord-contact-item img {
+    .small-contact-item img {
         width: 30px;
         height: 30px;
     }
 
-    .email-contact-item img {
+    .big-contact-item img {
         width: 36px;
         height: 36px;
     }
