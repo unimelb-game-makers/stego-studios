@@ -69,3 +69,33 @@
   background-color: #5a8c36;
   cursor: pointer;
 }
+
+.game-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.game-footer-text {
+    font-weight: bold;
+    color: black;
+    max-width: 50%;
+    font-size: 1.5rem;
+}
+
+.game-footer-button {
+    width: auto;
+    margin-top: 20px;
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+  .game-footer-text {
+    font-size: 1.2rem;
+    max-width: 70%;
+  }
+}

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { GameCarousel } from "@/components/carousel/game-carousel";
 import { GameHeader } from "@/components/game/game-header";
+import { GameFooter } from "@/components/game/game-footer";
 import GameRow from "@/components/game/game-row";
 import { theLastDiner } from "@/data/games";
 
@@ -30,13 +30,7 @@ function RouteComponent() {
 			<GameRow game={theLastDiner} />
 			<GameRow game={theLastDiner} reverse={true} />
 
-			<GameCarousel
-				images={[
-					"/images/image_one.jpg",
-					"/images/image_two.jpg",
-					"/images/image_three.jpg",
-				]}
-			/>
+			<GameFooter />
 		</>
 	);
 }

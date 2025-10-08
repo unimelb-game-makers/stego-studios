@@ -10,6 +10,7 @@ interface GameRowProps {
 }
 
 const GameRow = ({ game, reverse }: GameRowProps) => {
+	console.log(reverse);
 	return (
 		<div className={`${reverse ? "showcase-row-reverse" : "showcase-row"}`}>
 			<div className="showcase-left">
@@ -20,7 +21,7 @@ const GameRow = ({ game, reverse }: GameRowProps) => {
 					<GameGif
 						title="Story"
 						description={"description\nyes\nanother feature"}
-						reverse
+						reverse={reverse ?? false}
 					></GameGif>
 				)}
 			</div>
@@ -30,7 +31,7 @@ const GameRow = ({ game, reverse }: GameRowProps) => {
 					<GameGif
 						title="Features"
 						description={"description\nyes\nanother feature"}
-						reverse
+						reverse={reverse ?? false}
 					></GameGif>
 				) : (
 					<GameMedia game={game} reverse={reverse} />
