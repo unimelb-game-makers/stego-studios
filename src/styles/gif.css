@@ -2,8 +2,7 @@
 .giffy-reverse {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 18rem;
+  justify-content: flex-end;
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
@@ -11,4 +10,24 @@
 
 .giffy-reverse {
   flex-direction: row-reverse;
+}
+
+.giffy .giffy-child-two {
+  margin-right: 12rem;
+}
+
+.giffy-reverse .giffy-child-two {
+  margin-left: 12rem;
+}
+
+@media (max-width: 1000px) {
+  .giffy,
+  .giffy-reverse {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .giffy .giffy-child-two,
+  .giffy-reverse .giffy-child-two {
+    margin: 0rem;
+  }
 }

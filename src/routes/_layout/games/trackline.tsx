@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GameHeader } from "@/components/game/game-header";
+import { GameFooter } from "@/components/game/game-footer";
 import GameRow from "@/components/game/game-row";
 import { theLastDiner, trackline } from "@/data/games";
 export const Route = createFileRoute("/_layout/games/trackline")({
@@ -27,6 +28,8 @@ function RouteComponent() {
 			<GameRow game={theLastDiner} reverse={true} />
 			<GameRow game={theLastDiner} />
 			<GameRow game={theLastDiner} reverse={true} />
+
+			<GameFooter />
 		</>
 	);
 }
