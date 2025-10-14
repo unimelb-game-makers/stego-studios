@@ -16,9 +16,11 @@ function RouteComponent() {
 
 
   const [isChecked, setIsChecked] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
   const [cooldown, setCooldown] = useState(0);
-  const [isSending, setIsSending] = useState(false);
+  
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -52,7 +54,8 @@ function RouteComponent() {
             // Initialise cooldown before next message
             const endTime = new Date().getTime() + 60000;
             localStorage.setItem('cooldownEndTime', endTime.toString());
-            setCooldown(60);
+            setCooldown(0);
+            setShowPopup(true);
           },
           (error) => {
             console.log("failed: ", error);
@@ -97,7 +100,20 @@ function RouteComponent() {
   }, [cooldown]);
 
   return (
-    <div className="contact-page">
+    <div className={`contact-page ${showPopup ? "blur-background" : ""}`}>
+
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-card">
+            <img src="/images/contact-popup-lines.png" alt="envelope lines" className="popup-lines desktop-lines" />
+            <img src="/images/contact-popup-lines-small.png" alt="envelope lines" className="popup-lines mobile-lines" />
+            <img src="/images/stego.png" alt="logo" className="popup-logo" />
+            <p>Your message was sent.</p>
+            <button className="popup-back-button" onClick={() => setShowPopup(false)}>Back</button>
+          </div>
+        </div>
+      )}
+
       <div className="contact-title-container green-card">
         <h1>Contact Us</h1>
       </div>
