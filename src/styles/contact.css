@@ -119,7 +119,8 @@
 }
 
 .contact-button:disabled {
-  background-color: #2e3f37;
+  background-color: #B6C9B3;
+  color: #DDDDDD;
   cursor: not-allowed;
 }
 

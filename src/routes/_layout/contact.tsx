@@ -17,10 +17,19 @@ function RouteComponent() {
 
   const [isChecked, setIsChecked] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
+  const [cooldown, setCooldown] = useState(0);
+  const [isSending, setIsSending] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (isSending) return;
+    setIsSending(true);
 
     if (form.current) {
       emailjs
@@ -34,12 +43,26 @@ function RouteComponent() {
           () => {
             console.log("success");
             form.current?.reset();
+            setFirstName("");
+            setLastName("");
+            setEmail("");
+            setMessage("");
             setIsChecked(false);
+
+            // Initialise cooldown before next message
+            const endTime = new Date().getTime() + 60000;
+            localStorage.setItem('cooldownEndTime', endTime.toString());
+            setCooldown(60);
           },
           (error) => {
             console.log("failed: ", error);
           }
-        );
+        )
+        .finally(() => {
+          setIsSending(false);
+        });
+    } else {
+      setIsSending(false);
     }
   };
 
@@ -50,10 +73,28 @@ function RouteComponent() {
     };
 
     window.addEventListener("resize", handleResize);
+
+    // Get the cooldown time
+    const cooldownEndTime = localStorage.getItem('cooldownEndTime');
+    if (cooldownEndTime) {
+        const remainingTime = Math.ceil((parseInt(cooldownEndTime) - new Date().getTime()) / 1000);
+        if (remainingTime > 0) {
+            setCooldown(remainingTime);
+        }
+    }
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  
+  // Countdown cooldown
+  useEffect(() => {
+    if (cooldown > 0) {
+        const timer = setTimeout(() => setCooldown(cooldown - 1), 1000);
+        return () => clearTimeout(timer);
+    }
+  }, [cooldown]);
 
   return (
     <div className="contact-page">
@@ -66,10 +107,10 @@ function RouteComponent() {
         <div className="contact-form-container green-card">
           <h2>Roar into our inbox!</h2>
           <form ref={form} onSubmit={sendEmail}>
-            <input type="text" name="from_name" placeholder="First Name" />
-            <input type="text" name="from_last_name" placeholder="Last Name" />
-            <input type="email" name="reply_to" placeholder="Email Address" />
-            <textarea name="message" placeholder="Message" rows={isMobile ? 7 : 12}></textarea>
+            <input type="text" name="from_name" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+            <input type="text" name="from_last_name" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+            <input type="email" name="reply_to" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <textarea name="message" placeholder="Message" rows={isMobile ? 7 : 12} value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
             <div className="form-footer">
               <div className="checkbox-container">
                 <input
@@ -84,9 +125,9 @@ function RouteComponent() {
               <button
                 type="submit"
                 className="contact-button"
-                disabled={!isChecked}
+                disabled={isSending || cooldown > 0 || !firstName || !lastName || !email || !message || !isChecked}
               >
-                Send <FaArrowRightLong size="1.2rem" />
+                {isSending ? 'Sending...' : cooldown > 0 ? `${cooldown}s` : <>Send <FaArrowRightLong size="1.2rem" /></>}
               </button>
             </div>
           </form>
