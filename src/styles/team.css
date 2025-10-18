@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;700&family=Tilt+Warp&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Imprima&family=Inconsolata&family=Indie+Flower&display=swap");
 
 
 
 .group-photo img {
-	height: 100%;
+	height: auto;
 	width: 100%;
 	margin: 0;
 	border: 0;
@@ -16,14 +17,14 @@
 }
 
 .information {
-	max-width: 70rem;
-	margin: 5rem auto;
+	width: min(70rem, 90%);
+	margin: clamp(1.5rem, 4vw, 5rem) auto;
 	padding: 0.2rem;
 	text-align: center;
 
 	font-family: "Indie Flower", cursive;
 	font-style: normal;
-	font-size: 1.8rem;
+	font-size: clamp(1rem, calc(0.75vw + 0.9rem), 1.8rem)
 }
 
 .information h1 {
@@ -38,26 +39,21 @@
 }
 
 .outer-rectangle {
+    display: flex;
 	width: 100%;
 	height: 22rem;
 	background-color: #2d5427;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 
 .inner-rectangle {
-	padding: 2rem;
-	background-color: #efe1a1;
-	margin: auto;
-	width: 85%;
-	height: 50%;
-
 	display: flex;
+    width: 85%;
+	height: 50%;
+    margin: auto;
+	padding: 2rem;
+    justify-content: center;
 	align-items: center;
-	justify-content: center;
-
-	overflow: hidden;
+	background-color: #efe1a1;
 }
 
 .year {
@@ -73,9 +69,9 @@
 }
 
 .team-name {
+    display: flex;
 	margin-top: 2;
 	margin-bottom: 0;
-	display: flex;
 	width: auto;
 	height: 8rem;
 	flex-direction: column;
@@ -89,22 +85,21 @@
 }
 
 .team-banner {
+	margin: 0 auto;
 	width: 90%;
 	height: 30rem;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	border-radius: 4rem;
-
-	margin: 0 auto;
 }
 
 .team-list {
+    display: grid;
 	list-style: none;
 	margin-left: 2rem;
 	margin-right: 2rem;
 	padding: 0;
-	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 1rem;
 }
@@ -313,6 +308,40 @@
 
 /* Mobile/Small Tablet */
 @media (max-width: 900px) {
+    .outer-rectangle {
+        height: 10rem;  
+    }
+
+    .inner-rectangle {
+        width: 70%;
+        height: 30%;
+    }
+
+    .year {
+        font-size: 2.7rem;
+    }
+
+    .team-name {
+        font-size: 2rem;
+    }
+
+    .team-list {
+	    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-member {
+        padding: 0.2rem 0.4rem;
+    }
+
+    .team-member img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .team-member p {
+        margin-top: 1.2rem;
+    }
+
     .desktop-name {
         display: none;
     }
