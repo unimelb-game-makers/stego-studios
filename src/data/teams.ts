@@ -145,7 +145,7 @@ export function getTeamMembers(teamName: TeamName | string) {
 		return teams[teamKey];
 	}
 
-	return undefined;
+	return [];
 }
 
 export function getMember(teamName: string, memberName: string) {
