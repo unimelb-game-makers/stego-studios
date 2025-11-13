@@ -10,14 +10,16 @@ export const Route = createFileRoute("/_layout/contact")({
 
 function RouteComponent() {
   // emailjs variables, fill in when make account on gmc gmail
-  const service_id = "";
-  const template_id = "";
-  const public_key = "";
+  const SERVICE_ID = "service_i1we4is";
+  const TEMPLATE_ID = "template_7icfkod";
+  const PUBLIC_KEY = "YMpnVLWwCrT8wGXeq";
 
 
   const [isChecked, setIsChecked] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [showErrorMessage, setShowErrorMessage] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
   const [cooldown, setCooldown] = useState(0);
   
@@ -36,10 +38,10 @@ function RouteComponent() {
     if (form.current) {
       emailjs
         .sendForm(
-          service_id,
-          template_id,
+          SERVICE_ID,
+          TEMPLATE_ID,
           form.current,
-          public_key
+          PUBLIC_KEY
         )
         .then(
           () => {
@@ -56,9 +58,12 @@ function RouteComponent() {
             localStorage.setItem('cooldownEndTime', endTime.toString());
             setCooldown(0);
             setShowPopup(true);
+            setShowErrorMessage(false); // Clear error message on success
           },
           (error) => {
             console.log("failed: ", error);
+            setErrorMessage("Oops! The message didn't send.");
+            setShowErrorMessage(true);
           }
         )
         .finally(() => {
@@ -127,6 +132,7 @@ function RouteComponent() {
             <input type="text" name="from_last_name" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
             <input type="email" name="reply_to" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} />
             <textarea name="message" placeholder="Message" rows={isMobile ? 7 : 12} value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+            {showErrorMessage && <p style={{ color: '#FF6347', marginTop: '5px' }}>{errorMessage}</p>}
             <div className="form-footer">
               <div className="checkbox-container">
                 <input
