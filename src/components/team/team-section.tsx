@@ -11,7 +11,7 @@ interface TeamSectionProps {
 const TeamSection = ({ name, title, bannerImage, members }: TeamSectionProps) => {
 	return (
 		<div className="team">
-			<h1 className="team-name">{title}</h1>
+			<h1 className="team-name">{name + " - " + title}</h1>
 
 			<div
 				className="team-banner"

@@ -36,7 +36,7 @@ function RouteComponent() {
 			<div>
 				<TeamSection
 					name="Team Rocket"
-					title="Team Rocket - The Last Diner"
+					title="The Last Diner"
 					bannerImage="/images/the-last-diner.png"
 					members={getTeamMembers("Team Rocket") || []}
 				/>
@@ -45,7 +45,7 @@ function RouteComponent() {
 			<div>
 				<TeamSection
 					name="Team Magma"
-					title="Team Magma - Trackline"
+					title="Trackline"
 					bannerImage="/images/trackline.png"
 					members={getTeamMembers("Team Magma") || []}
 				/>
@@ -54,7 +54,7 @@ function RouteComponent() {
 			<div>
 				<TeamSection
 					name="Team Aqua"
-					title="Team Aqua - Noelle's Ark"
+					title="Noelle's Ark"
 					bannerImage="/images/noelles-ark.png"
 					members={getTeamMembers("Team Aqua") || []}
 				/>
