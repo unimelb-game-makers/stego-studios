@@ -15,6 +15,7 @@ function RouteComponent() {
 				image="/images/the-last-diner.png"
 				title={theLastDiner.title}
 				tags={theLastDiner.tags}
+				teamAnchor="team-rocket"
 				presskitUrl={theLastDiner.presskitUrl}
 			>
 				Survival stealth game where the player is a chef gathering ingredients

@@ -33,7 +33,7 @@ function RouteComponent() {
 				</div>
 			</div>
 
-			<div>
+			<div id="team-rocket">
 				<TeamSection
 					name="Team Rocket"
 					title="The Last Diner"
@@ -42,7 +42,7 @@ function RouteComponent() {
 				/>
 			</div>
 
-			<div>
+			<div id="team-magma">
 				<TeamSection
 					name="Team Magma"
 					title="Trackline"
@@ -51,7 +51,7 @@ function RouteComponent() {
 				/>
 			</div>
 
-			<div>
+			<div id="team-aqua">
 				<TeamSection
 					name="Team Aqua"
 					title="Noelle's Ark"

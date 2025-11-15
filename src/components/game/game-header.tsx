@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Link } from "@tanstack/react-router";
 import "../../styles/game.css";
 
 interface GameHeaderProps {
@@ -6,10 +7,11 @@ interface GameHeaderProps {
   title: string;
   tags: string[];
   children: ReactNode;
+  teamAnchor: string;
   presskitUrl?: string;
 }
 
-const GameHeader = ({ image, title, tags, children, presskitUrl }: GameHeaderProps) => {
+const GameHeader = ({ image, title, tags, children, teamAnchor, presskitUrl }: GameHeaderProps) => {
   return (
     <div className="game-header">
       <img src={image} className="game-header-image" />
@@ -26,7 +28,21 @@ const GameHeader = ({ image, title, tags, children, presskitUrl }: GameHeaderPro
         </p>
         <p className="game-description">{children}</p>
         <div className="game-button-holder">
-          <button className="game-button">The Team</button>
+          <Link
+            to="/team"
+            hash={teamAnchor}
+            className="game-button"
+          >
+            The Team
+          </Link>
+          
+          <Link
+            to="." 
+            className="game-button"
+          >
+            Presskit
+          </Link>
+
           <button
             className="game-button"
             onClick={() => {
@@ -39,7 +55,7 @@ const GameHeader = ({ image, title, tags, children, presskitUrl }: GameHeaderPro
             }}
           >
             Presskit
-        </button>
+          </button>
         </div>
       </div>
     </div>

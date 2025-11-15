@@ -55,7 +55,7 @@
 .game-button {
     margin: 0;
     background-color: #70ac44;
-    width: 33%;
+    width: 22%;
     border: none;
     border-radius: 8px;
     padding: 15px 25px;
@@ -63,6 +63,9 @@
     transition: background-color 0.3s ease;
     text-decoration: none;
     box-shadow: -8px 8px 0 #30442c;
+
+    text-align: center;
+    color: inherit;
 }
 
 .game-button:hover {

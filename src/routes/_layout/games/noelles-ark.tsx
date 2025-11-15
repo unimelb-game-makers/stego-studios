@@ -15,6 +15,7 @@ function RouteComponent() {
 				image="/images/the-last-diner.png"
 				title={noellesArk.title}
 				tags={noellesArk.tags}
+				teamAnchor="team-aqua"
 				presskitUrl={noellesArk.presskitUrl}
 			>
 				Survival stealth game where the player is a chef gathering ingredients
