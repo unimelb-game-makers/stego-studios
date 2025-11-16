@@ -15,6 +15,7 @@ function RouteComponent() {
 				image="/images/the-last-diner.png"
 				title={theLastDiner.title}
 				tags={theLastDiner.tags}
+				presskitUrl={theLastDiner.presskitUrl}
 			>
 				Survival stealth game where the player is a chef gathering ingredients
 				in a ruined city to cook a meal for an eldritch god. Throughout the city

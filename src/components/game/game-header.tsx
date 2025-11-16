@@ -6,9 +6,10 @@ interface GameHeaderProps {
   title: string;
   tags: string[];
   children: ReactNode;
+  presskitUrl?: string;
 }
 
-const GameHeader = ({ image, title, tags, children }: GameHeaderProps) => {
+const GameHeader = ({ image, title, tags, children, presskitUrl }: GameHeaderProps) => {
   return (
     <div className="game-header">
       <img src={image} className="game-header-image" />
@@ -26,7 +27,19 @@ const GameHeader = ({ image, title, tags, children }: GameHeaderProps) => {
         <p className="game-description">{children}</p>
         <div className="game-button-holder">
           <button className="game-button">The Team</button>
-          <button className="game-button">Presskit</button>
+          <button
+            className="game-button"
+            onClick={() => {
+              if (presskitUrl) {
+                const link = document.createElement("a");
+                link.href = presskitUrl;
+                link.download = "";
+                link.click();
+              }
+            }}
+          >
+            Presskit
+        </button>
         </div>
       </div>
     </div>
