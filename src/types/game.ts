@@ -7,6 +7,7 @@ interface Game {
   team: string;
   description: string;
   image: string;
+  presskitUrl?: string;
 }
 
 export { type Game }

@@ -5,6 +5,8 @@
       "name": "my-app",
       "dependencies": {
         "@emailjs/browser": "^4.4.1",
+        "@emotion/react": "^11.0.0",
+        "@emotion/styled": "^11.0.0",
         "@mui/icons-material": "^7.3.2",
         "@mui/material": "^7.3.2",
         "@notionhq/client": "^4.0.2",

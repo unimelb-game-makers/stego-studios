@@ -9,6 +9,7 @@ export const theLastDiner: Game = {
   city for ingredients to cook an offering. They must avoid monsters
   while collecting ingredients.`,
   image: "/images/the-last-diner.png",
+  presskitUrl: "https://github.com/unimelb-game-makers/stego-studios/releases/download/untagged-3c26744a55010b80f6ab/Mini-Metro-images.zip",
 };
 
 export const trackline: Game = {
@@ -20,6 +21,7 @@ export const trackline: Game = {
   their way out of the expansive urban underground by switching the
   tempo with their cassette tapes.`,
   image: "/images/trackline.png",
+  presskitUrl: "https://github.com/unimelb-game-makers/stego-studios/releases/download/untagged-3c26744a55010b80f6ab/Mini-Metro-images.zip",
 };
 
 export const noellesArk: Game = {
@@ -32,4 +34,5 @@ export const noellesArk: Game = {
   navigate the oceans and explore islands to escape this
   recession-defining housing crisis!`,
   image: "/images/noelles-ark.png",
+  presskitUrl: "https://github.com/unimelb-game-makers/stego-studios/releases/download/untagged-3c26744a55010b80f6ab/Mini-Metro-images.zip",
 };
