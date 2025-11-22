@@ -20,7 +20,7 @@ export const trackline: Game = {
   description: `A rhythm-based action game about a Walkman wielding rebel fighting
   their way out of the expansive urban underground by switching the
   tempo with their cassette tapes.`,
-  image: "/images/trackline.png",
+  image: "/images/banners/trackline.png",
   presskitUrl: "https://github.com/unimelb-game-makers/stego-studios/releases/download/untagged-3c26744a55010b80f6ab/Mini-Metro-images.zip",
 };
 
@@ -33,6 +33,6 @@ export const noellesArk: Game = {
   your home island is swallowed up by a flood. You'll have to
   navigate the oceans and explore islands to escape this
   recession-defining housing crisis!`,
-  image: "/images/noelles-ark.png",
+  image: "/images/banners/noelles_ark.png",
   presskitUrl: "https://github.com/unimelb-game-makers/stego-studios/releases/download/untagged-3c26744a55010b80f6ab/Mini-Metro-images.zip",
 };

@@ -35,15 +35,8 @@ const GameHeader = ({ image, title, tags, children, teamAnchor, presskitUrl }: G
           >
             The Team
           </Link>
-          
-          <Link
-            to="." 
-            className="game-button"
-          >
-            Presskit
-          </Link>
 
-          <button
+          {/* <button
             className="game-button"
             onClick={() => {
               if (presskitUrl) {
@@ -55,7 +48,24 @@ const GameHeader = ({ image, title, tags, children, teamAnchor, presskitUrl }: G
             }}
           >
             Presskit
-          </button>
+          </button> */}
+
+          <Link
+            to="."
+            onClick={(e) => {
+              e.preventDefault();
+              if (presskitUrl) {
+                const link = document.createElement("a");
+                link.href = presskitUrl;
+                link.download = "";
+                link.click();
+              }
+            }}
+            className="game-button"
+          >
+            Presskit
+          </Link>
+
         </div>
       </div>
     </div>
