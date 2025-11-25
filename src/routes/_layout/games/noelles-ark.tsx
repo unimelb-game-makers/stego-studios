@@ -31,9 +31,9 @@ function RouteComponent() {
 				And how can an old tale, one closely resembling your own journey, guide you through the storm?
 			</GameHeader>
 
-			<GameRow game={noellesArk} reverse={true} />
-			<GameRow game={noellesArk} />
-			<GameRow game={noellesArk} reverse={true} />
+			<GameRow game={noellesArk} section="features" reverse={true} />
+			<GameRow game={noellesArk} section="description" />
+			<GameRow game={noellesArk} section="story" reverse={true} />
 
 			<GameFooter />
 		</>

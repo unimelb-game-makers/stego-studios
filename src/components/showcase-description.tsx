@@ -29,7 +29,7 @@ const ShowcaseDescription = ({ game, reverse }: ShowcaseRowProps) => {
               ))}
             </p>
             <p>{game.team}</p>
-            <p>{game.description}</p>
+            <p>{game.gameDescription}</p>
             <div
               className={`showcase-button-holder${reverse ? "-reverse" : ""}`}
             >

@@ -26,9 +26,9 @@ function RouteComponent() {
 				rhythm-driven combat and platforming to beat their way through the underground.
 			</GameHeader>
 
-			<GameRow game={trackline} reverse={true} />
-			<GameRow game={trackline} />
-			<GameRow game={trackline} reverse={true} />
+			<GameRow game={trackline} section="features" reverse={true} />
+			<GameRow game={trackline} section="description" />
+			<GameRow game={trackline} section="story" reverse={true} />
 
 			<GameFooter />
 		</>

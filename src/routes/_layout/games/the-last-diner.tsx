@@ -28,9 +28,9 @@ function RouteComponent() {
 				time the player loses.
 			</GameHeader>
 
-			<GameRow game={theLastDiner} reverse={true} />
-			<GameRow game={theLastDiner} />
-			<GameRow game={theLastDiner} reverse={true} />
+			<GameRow game={theLastDiner} section="features" reverse={true} />
+			<GameRow game={theLastDiner} section="description" />
+			<GameRow game={theLastDiner} section="story" reverse={true} />
 
 			<GameFooter />
 		</>
