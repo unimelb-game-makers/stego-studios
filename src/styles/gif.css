@@ -1,11 +1,19 @@
-.giffy,
+.giffy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 0 0 auto;
+}
+
 .giffy-reverse {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 600px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 0 0;
 }
 
 .giffy-reverse {
@@ -35,6 +43,7 @@
   .giffy-reverse {
     flex-direction: column;
     justify-content: center;
+    margin: 0 auto;
   }
   .giffy .giffy-child-two,
   .giffy-reverse .giffy-child-two {

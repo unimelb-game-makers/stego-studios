@@ -12,26 +12,10 @@ const GameGif = ({ title, description, reverse }: GameGifProps) => {
 			<div className="giffy-child-two">
 				<h1>{title}</h1>
 				<p>{description}</p>
-
-				{/* <BulletList points={description}></BulletList> */}
 			</div>
 		</div>
 	);
 };
 
-// interface BulletListProps {
-// 	points: string;
-// }
-
-// const BulletList = ({ points }: BulletListProps) => {
-// 	const items = points.split("\n");
-// 	return (
-// 		<ul>
-// 			{items.map((item, i) => (
-// 				<li key={i}>{item}</li>
-// 			))}
-// 		</ul>
-// 	);
-// };
 
 export { GameGif };
