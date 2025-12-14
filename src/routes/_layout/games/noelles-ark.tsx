@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { GameHeader } from "@/components/game/game-header";
 import { GameFooter } from "@/components/game/game-footer";
 import GameRow from "@/components/game/game-row";
-import { noellesArk, theLastDiner } from "@/data/games";
+import { noellesArk } from "@/data/games";
 
 export const Route = createFileRoute("/_layout/games/noelles-ark")({
 	component: RouteComponent,
@@ -12,24 +12,28 @@ function RouteComponent() {
 	return (
 		<>
 			<GameHeader
-				image="/images/the-last-diner.png"
+				image="/images/banners/noelles_ark.png"
 				title={noellesArk.title}
 				tags={noellesArk.tags}
+				teamAnchor="team-aqua"
 				presskitUrl={noellesArk.presskitUrl}
 			>
-				Survival stealth game where the player is a chef gathering ingredients
-				in a ruined city to cook a meal for an eldritch god. Throughout the city
-				are several monsters who’ll attack the player if spotted, but need to be
-				passed to gather ingredients inside of the ruined buildings. Once the
-				player has the ingredients, they can return to the kitchen and cook the
-				ingredients into a meal to feed the eldritch god. Once fed the god gives
-				a player a powerup bonus for the remaining levels, but if not fed in
-				time the player loses.
+				Following a coming of age ceremony that went worse than you could have imagined, 
+				Noelle is left transformed into a monstrous creature and forced to flee from home.
+				<br /><br />
+				She arrives on an unfamiliar island beyond what she had known existed and prepares 
+				for all she can do; survive.
+				<br /><br />
+				To make matters worse, a disastrous world-resetting flood is imminent, approaching 
+				in less than 10 days.
+				<br /><br />
+				How can Noelle save herself, her new allies and learn the truth hidden beneath the waters? 
+				And how can an old tale, one closely resembling your own journey, guide you through the storm?
 			</GameHeader>
 
-			<GameRow game={theLastDiner} reverse={true} />
-			<GameRow game={theLastDiner} />
-			<GameRow game={theLastDiner} reverse={true} />
+			<GameRow game={noellesArk} section="features" reverse={true} />
+			<GameRow game={noellesArk} section="description" />
+			<GameRow game={noellesArk} section="story" reverse={true} />
 
 			<GameFooter />
 		</>

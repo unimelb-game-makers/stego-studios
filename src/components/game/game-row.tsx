@@ -4,38 +4,41 @@ import type { Game } from "@/types/game";
 import { GameMedia } from "./game-media";
 import { GameGif } from "./games-gif";
 
+type Section = "features" | "description" | "story"
+
 interface GameRowProps {
 	game: Game;
+	section: Section;
 	reverse?: boolean;
 }
 
-const GameRow = ({ game, reverse }: GameRowProps) => {
-	console.log(reverse);
+const GameRow = ({ game, section, reverse = false }: GameRowProps) => {
+	let gifData;
+
+	if (section === "features") {
+		gifData = game.gifFeature;
+	} else if (section === "description") {
+		gifData = game.gifDescription;
+	} else {
+		gifData = game.gifStory;
+	}
+
+	const media = <GameMedia  game={game} reverse={reverse} />;
+	const gif = (
+		<GameGif
+			title={gifData.title}
+			description={gifData.description}
+			reverse={reverse}
+		/>
+	);
+
 	return (
 		<div className={`${reverse ? "showcase-row-reverse" : "showcase-row"}`}>
 			<div className="showcase-left">
-				{reverse ? (
-					<GameMedia game={game} reverse={reverse} />
-				) : (
-					// <GameMediaDescription game={game} reverse={reverse} />
-					<GameGif
-						title="Story"
-						description={"description\nyes\nanother feature"}
-						reverse={reverse ?? false}
-					></GameGif>
-				)}
+				{reverse ? media : gif}
 			</div>
 			<div className="showcase-right">
-				{reverse ? (
-					// <GameMediaDescription game={game} reverse={reverse} />
-					<GameGif
-						title="Features"
-						description={"description\nyes\nanother feature"}
-						reverse={reverse ?? false}
-					></GameGif>
-				) : (
-					<GameMedia game={game} reverse={reverse} />
-				)}
+				{reverse ? gif : media}
 			</div>
 		</div>
 	);

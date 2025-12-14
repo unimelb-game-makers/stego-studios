@@ -28,7 +28,7 @@ const GameMediaDescription = ({ game, reverse }: GameMediaDescriptionProps) => {
               ))}
             </p>
             <p>{game.team}</p>
-            <p>{game.description}</p>
+            <p>{game.gameDescription}</p>
           </div>
         </div>
       </div>

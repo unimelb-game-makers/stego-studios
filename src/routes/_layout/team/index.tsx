@@ -33,26 +33,29 @@ function RouteComponent() {
 				</div>
 			</div>
 
-			<div>
+			<div id="team-rocket">
 				<TeamSection
-					title="Team Rocket - The Last Diner"
+					name="Team Rocket"
+					title="The Last Diner"
 					bannerImage="/images/the-last-diner.png"
 					members={getTeamMembers("Team Rocket") || []}
 				/>
 			</div>
 
-			<div>
+			<div id="team-magma">
 				<TeamSection
-					title="Team Magma - Trackline"
-					bannerImage="/images/trackline.png"
+					name="Team Magma"
+					title="Trackline"
+					bannerImage="/images/banners/trackline.png"
 					members={getTeamMembers("Team Magma") || []}
 				/>
 			</div>
 
-			<div>
+			<div id="team-aqua">
 				<TeamSection
-					title="Team Aqua - Noelle's Ark"
-					bannerImage="/images/noelles-ark.png"
+					name="Team Aqua"
+					title="Noelle's Ark"
+					bannerImage="/images/banners/noelles_ark.png"
 					members={getTeamMembers("Team Aqua") || []}
 				/>
 			</div>

@@ -64,22 +64,146 @@ export const teams = {
 	],
 	"Team Magma": [
 		{
-			name: "Jun",
-			role: "Technical Director",
-			skills: ["Leadership", "Technical Director specialist"],
+			name: "Ryan Kitchen",
+			role: "Producer",
+			skills: [""],
 			contact: [
-				{ type: "email", content: "junissocool@gmail.com" },
-				{ type: "personal", content: "junyyeo.dev" },
+				{ type: "email", content: "" },
+				{ type: "personal", content: "" },
 			],
-			description: "The best technical director ever",
+			description: "",
 			personalNote: "",
 		},
 		{
-			name: "Iden",
-			role: "Team Member",
-			skills: ["Drinking water", "eating food"],
-			contact: [{ type: "email", content: "idenissocool@gmail.com" }],
-			description: "Testing for duplicate names in different teams",
+			name: "Trevor",
+			role: "Music Composer",
+			skills: [""],
+			contact: [
+				{ type: "email", content: "" },
+				{ type: "personal", content: "" },
+			],
+			description: "",
+			personalNote: "",
+		},
+		{
+			name: "Jasper McDowell",
+			role: "Narrative Designer",
+			skills: [""],
+			contact: [
+				{ type: "email", content: "" },
+				{ type: "personal", content: "" },
+			],
+			description: "",
+			personalNote: "",
+		},
+		{
+			name: "Audrey Wang",
+			role: "UX Designer",
+			skills: [""],
+			contact: [
+				{ type: "email", content: "" },
+				{ type: "personal", content: "" },
+			],
+			description: "",
+			personalNote: "",
+		},
+		{
+			name: "Xilei Zhao",
+			role: "Artist (3D)",
+			skills: [""],
+			contact: [
+				{ type: "email", content: "" },
+				{ type: "personal", content: "" },
+			],
+			description: "",
+			personalNote: "",
+		},
+		{
+			name: "Riya Baldawa",
+			role: "Artist (2D/3D)",
+			skills: [""],
+			contact: [
+				{ type: "email", content: "" },
+				{ type: "personal", content: "" },
+			],
+			description: "",
+			personalNote: "",
+		},
+		{
+			name: "Chaoqi Huang (Angela)",
+			role: "Artist (3D)",
+			skills: [""],
+			contact: [
+				{ type: "email", content: "" },
+				{ type: "personal", content: "" },
+			],
+			description: "",
+			personalNote: "",
+		},
+		{
+			name: "Peiyu Wang (Vincent)",
+			role: "Programmer",
+			skills: [""],
+			contact: [
+				{ type: "email", content: "" },
+				{ type: "personal", content: "" },
+			],
+			description: "",
+			personalNote: "",
+		},
+		{
+			name: "William Alexander Tang Wai",
+			role: "Programmer",
+			skills: [""],
+			contact: [
+				{ type: "email", content: "" },
+				{ type: "personal", content: "" },
+			],
+			description: "",
+			personalNote: "",
+		},
+		{
+			name: "Qingying Lyu (Ellen)",
+			role: "Programmer",
+			skills: ["Unity, C#"],
+			contact: [
+				{ type: "email", content: "qylyu00@gmail.com" },
+				{ type: "personal", content: "" },
+			],
+			description: "Lead programmer for Trackline.",
+			personalNote: ":D",
+		},
+		{
+			name: "James Mingchong Li",
+			role: "Programmer",
+			skills: [""],
+			contact: [
+				{ type: "email", content: "" },
+				{ type: "personal", content: "" },
+			],
+			description: "",
+			personalNote: "",
+		},
+		{
+			name: "Gabriel Chan",
+			role: "Game Designer",
+			skills: [""],
+			contact: [
+				{ type: "email", content: "" },
+				{ type: "personal", content: "" },
+			],
+			description: "",
+			personalNote: "",
+		},
+		{
+			name: "Blake Allen",
+			role: "Game Designer",
+			skills: ["Level Design, Enemy Design, Play-Testing"],
+			contact: [
+				{ type: "email", content: "b.christopherallen01@gmail.com" },
+				{ type: "personal", content: "" },
+			],
+			description: "I was a game designer for Trackline. After the collaborative ideation, I mostly worked on designing the layout of levels, and the enemies that populate the game.",
 			personalNote: "",
 		},
 	],
@@ -145,7 +269,7 @@ export function getTeamMembers(teamName: TeamName | string) {
 		return teams[teamKey];
 	}
 
-	return [];
+	return undefined;
 }
 
 export function getMember(teamName: string, memberName: string) {

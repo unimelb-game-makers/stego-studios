@@ -15,6 +15,7 @@ function RouteComponent() {
 				image="/images/the-last-diner.png"
 				title={theLastDiner.title}
 				tags={theLastDiner.tags}
+				teamAnchor="team-rocket"
 				presskitUrl={theLastDiner.presskitUrl}
 			>
 				Survival stealth game where the player is a chef gathering ingredients
@@ -27,9 +28,9 @@ function RouteComponent() {
 				time the player loses.
 			</GameHeader>
 
-			<GameRow game={theLastDiner} reverse={true} />
-			<GameRow game={theLastDiner} />
-			<GameRow game={theLastDiner} reverse={true} />
+			<GameRow game={theLastDiner} section="features" reverse={true} />
+			<GameRow game={theLastDiner} section="description" />
+			<GameRow game={theLastDiner} section="story" reverse={true} />
 
 			<GameFooter />
 		</>
