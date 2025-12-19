@@ -11,17 +11,23 @@ export const theLastDiner: Game = {
 
   gifFeature: {
     title: "Features",
-    description: ``,
+    description: `Roguelite scavenging and dungeon crawling contrasted by various relaxing cooking minigames. 
+    Environments composed of hand-drawn spritework alongside atmospheric musical tracks. 
+    A robust craftable food and status system.`,
   },
 
   gifDescription: {
     title: "About the Game",
-    description: ``,
+    description: `The Last Diner is a roguelike dungeon crawler game about a chef attempting to survive in an eldritch apocalypse.
+    Wielding only a rifle and cooking skills, explore and survive a world after the collapse of society.`,
   },
 
   gifStory: {
     title: "Story",
-    description: ``,
+    description: `The unprecedented emergence of eldritch beings marks the 
+    end of the world as previously known, plunging the world into an age of darkness. 
+    Alex, a chef of some renown ends up attracting the interest of one of these entities with his culinary expertise.
+    `,
   },
 
   image: "/images/the-last-diner.png",
