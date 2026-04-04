@@ -12,6 +12,7 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as LayoutImport } from './routes/_layout'
+import { Route as DevlogIndexImport } from './routes/devlog/index'
 import { Route as LayoutIndexImport } from './routes/_layout/index'
 import { Route as LayoutContactImport } from './routes/_layout/contact'
 import { Route as LayoutTeamIndexImport } from './routes/_layout/team/index'
@@ -25,6 +26,12 @@ import { Route as LayoutTeamTeamMemberImport } from './routes/_layout/team/$team
 
 const LayoutRoute = LayoutImport.update({
   id: '/_layout',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const DevlogIndexRoute = DevlogIndexImport.update({
+  id: '/devlog/',
+  path: '/devlog/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -100,6 +107,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof LayoutIndexImport
       parentRoute: typeof LayoutImport
+    }
+    '/devlog/': {
+      id: '/devlog/'
+      path: '/devlog'
+      fullPath: '/devlog'
+      preLoaderRoute: typeof DevlogIndexImport
+      parentRoute: typeof rootRoute
     }
     '/_layout/games/noelles-ark': {
       id: '/_layout/games/noelles-ark'
@@ -177,6 +191,7 @@ export interface FileRoutesByFullPath {
   '': typeof LayoutRouteWithChildren
   '/contact': typeof LayoutContactRoute
   '/': typeof LayoutIndexRoute
+  '/devlog': typeof DevlogIndexRoute
   '/games/noelles-ark': typeof LayoutGamesNoellesArkRoute
   '/games/the-last-diner': typeof LayoutGamesTheLastDinerRoute
   '/games/trackline': typeof LayoutGamesTracklineRoute
@@ -188,6 +203,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/contact': typeof LayoutContactRoute
   '/': typeof LayoutIndexRoute
+  '/devlog': typeof DevlogIndexRoute
   '/games/noelles-ark': typeof LayoutGamesNoellesArkRoute
   '/games/the-last-diner': typeof LayoutGamesTheLastDinerRoute
   '/games/trackline': typeof LayoutGamesTracklineRoute
@@ -201,6 +217,7 @@ export interface FileRoutesById {
   '/_layout': typeof LayoutRouteWithChildren
   '/_layout/contact': typeof LayoutContactRoute
   '/_layout/': typeof LayoutIndexRoute
+  '/devlog/': typeof DevlogIndexRoute
   '/_layout/games/noelles-ark': typeof LayoutGamesNoellesArkRoute
   '/_layout/games/the-last-diner': typeof LayoutGamesTheLastDinerRoute
   '/_layout/games/trackline': typeof LayoutGamesTracklineRoute
@@ -215,6 +232,7 @@ export interface FileRouteTypes {
     | ''
     | '/contact'
     | '/'
+    | '/devlog'
     | '/games/noelles-ark'
     | '/games/the-last-diner'
     | '/games/trackline'
@@ -225,6 +243,7 @@ export interface FileRouteTypes {
   to:
     | '/contact'
     | '/'
+    | '/devlog'
     | '/games/noelles-ark'
     | '/games/the-last-diner'
     | '/games/trackline'
@@ -236,6 +255,7 @@ export interface FileRouteTypes {
     | '/_layout'
     | '/_layout/contact'
     | '/_layout/'
+    | '/devlog/'
     | '/_layout/games/noelles-ark'
     | '/_layout/games/the-last-diner'
     | '/_layout/games/trackline'
@@ -247,10 +267,12 @@ export interface FileRouteTypes {
 
 export interface RootRouteChildren {
   LayoutRoute: typeof LayoutRouteWithChildren
+  DevlogIndexRoute: typeof DevlogIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   LayoutRoute: LayoutRouteWithChildren,
+  DevlogIndexRoute: DevlogIndexRoute,
 }
 
 export const routeTree = rootRoute
@@ -263,7 +285,8 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/_layout"
+        "/_layout",
+        "/devlog/"
       ]
     },
     "/_layout": {
@@ -286,6 +309,9 @@ export const routeTree = rootRoute
     "/_layout/": {
       "filePath": "_layout/index.tsx",
       "parent": "/_layout"
+    },
+    "/devlog/": {
+      "filePath": "devlog/index.tsx"
     },
     "/_layout/games/noelles-ark": {
       "filePath": "_layout/games/noelles-ark.tsx",
