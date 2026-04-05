@@ -15,7 +15,7 @@
 		"@emotion/styled": "^11.0.0",
 		"@mui/icons-material": "^7.3.2",
 		"@mui/material": "^7.3.2",
-		"@notionhq/client": "^4.0.2",
+		"@notionhq/client": "^5.16.0",
 		"@tanstack/react-query": "^5.85.3",
 		"@tanstack/react-router": "^1.114.3",
 		"@tanstack/react-router-devtools": "^1.114.3",
