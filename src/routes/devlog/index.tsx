@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import posts from '@/data/devlog.json'
 
 export const Route = createFileRoute('/devlog/')({
@@ -7,9 +7,11 @@ export const Route = createFileRoute('/devlog/')({
 
 function RouteComponent() {
   return (
-    <div>
+    <div className="devlog-list">
       {posts.map((post) => (
-        <div key={post.id}>{post.name}</div>
+        <Link key={post.id} to="/devlog/$id" params={{ id: post.id }} className="devlog-list-item">
+          {post.name}
+        </Link>
       ))}
     </div>
   )
