@@ -1,9 +1,9 @@
 import "../styles/games.css";
 
-const GamesHeader = () => {
+const GamesHeader = ({ year }: { year: number }) => {
   return (
     <div className="games-header">
-      <h1>Games in 2025</h1>
+      <h1>Games in {year}</h1>
     </div>
   );
 };

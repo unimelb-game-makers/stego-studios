@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import ScrollingBanner from "@/components/banner";
 import { MainCarousel } from "@/components/carousel/main-carousel";
 import Showcase from "@/components/showcase";
+import { noellesArk, theLastDiner, trackline } from "@/data/games";
 
 export const Route = createFileRoute("/_layout/")({
   component: RouteComponent,
@@ -12,7 +13,7 @@ function RouteComponent() {
     <>
       <MainCarousel />
       <ScrollingBanner />
-      <Showcase />
+      <Showcase games={[noellesArk, trackline, theLastDiner]}/>
     </>
   );
 }
