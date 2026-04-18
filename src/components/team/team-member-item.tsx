@@ -7,7 +7,7 @@ export interface TeamMemberItemProps {
 const TeamMemberItem = ({ image, name, role }: TeamMemberItemProps) => {
 	return (
 		<div className="team-member">
-			<img src={image} alt={`${name}'s profile picture`} />
+			{/* <img src={image} alt={`${name}'s profile picture`} /> */}
 			<p>{name}</p>
 			<p>{role}</p>
 		</div>

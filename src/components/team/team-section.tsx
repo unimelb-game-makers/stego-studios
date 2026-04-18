@@ -30,7 +30,7 @@ const TeamSection = ({ name, title, bannerImage, members }: TeamSectionProps) =>
 							}}
 							className="team-member"
 						>
-							<img src={m.imageUrl ?? "/images/stego.png"} alt={m.name} />
+							{/* <img src={m.imageUrl ?? "/images/stego.png"} alt={m.name} /> */}
 							<p>
 								{m.name}
 								<br />
