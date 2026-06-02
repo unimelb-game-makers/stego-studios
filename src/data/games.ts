@@ -1,5 +1,26 @@
 import { type Game } from "../types/game";
 
+export const upcoming: Game = {
+  linkProps: {},
+  title: "???",
+  tags: [],
+  team: "",
+  gameDescription: `Coming Soon...`,
+  gifFeature: {
+    title: "",
+    description: ""
+  },
+  gifDescription: {
+    title: "",
+    description: ""
+  },
+  gifStory: {
+    title: "",
+    description: ""
+  },
+  image: "/images/upcoming.png",
+}
+
 export const theLastDiner: Game = {
   linkProps: { to: "/games/the-last-diner" },
   title: "The Last Diner",

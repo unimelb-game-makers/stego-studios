@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import posts from '@/data/devlog.json'
 
-export const Route = createFileRoute('/devlog/')({
+export const Route = createFileRoute('/_layout/devlog/')({
   component: RouteComponent,
 })
 

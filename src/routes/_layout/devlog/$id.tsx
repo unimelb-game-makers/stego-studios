@@ -2,7 +2,7 @@ import { createFileRoute, Link, Navigate } from '@tanstack/react-router'
 import ReactMarkdown from 'react-markdown'
 import posts from '@/data/devlog.json'
 
-export const Route = createFileRoute('/devlog/$id')({
+export const Route = createFileRoute('/_layout/devlog/$id')({
   component: RouteComponent,
 })
 
