@@ -1,4 +1,4 @@
-import { noellesArk, theLastDiner, trackline } from "@/data/games";
+import { games } from "@/data/games";
 import "../styles/showcase.css";
 
 import ShowcaseRow from "./showcase-row";
@@ -6,9 +6,13 @@ import ShowcaseRow from "./showcase-row";
 const Showcase = () => {
   return (
     <div className="showcase">
-      <ShowcaseRow game={theLastDiner} reverse={true} />
-      <ShowcaseRow game={trackline} />
-      <ShowcaseRow game={noellesArk} reverse={true} />
+      {games.map((game, index) => (
+        <ShowcaseRow
+          key={game.id}
+          game={game}
+          reverse={index % 2 === 0}
+        />
+      ))}
     </div>
   );
 };

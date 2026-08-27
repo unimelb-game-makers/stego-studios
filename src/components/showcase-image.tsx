@@ -18,7 +18,7 @@ const ShowcaseImage = ({ game, reverse }: ShowcaseImageProps) => {
         <div
           className={`${reverse ? "showcase-game-image-right" : "showcase-game-image-left"}`}
         >
-          <Link {...game.linkProps}>
+          <Link to="/games/$slug" params={{ slug: game.slug }}>
             <img
               className="showcase-game-image green-border"
               src={game.image}
