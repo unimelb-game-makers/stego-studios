@@ -3,9 +3,10 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev": "vite --port 3000",
-		"start": "vite --port 3000",
-		"build": "vite build && tsc",
+		"sync:games": "bun scripts/sync-games.mjs",
+		"dev": "bun run sync:games && vite --port 3000",
+		"start": "bun run sync:games && vite --port 3000",
+		"build": "bun run sync:games && vite build && tsc",
 		"serve": "vite preview",
 		"test": "vitest run"
 	},

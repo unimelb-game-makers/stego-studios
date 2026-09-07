@@ -1,5 +1,6 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "my-app",
@@ -197,7 +198,7 @@
 
     "@mui/utils": ["@mui/utils@7.3.1", "", { "dependencies": { "@babel/runtime": "^7.28.2", "@mui/types": "^7.4.5", "@types/prop-types": "^15.7.15", "clsx": "^2.1.1", "prop-types": "^15.8.1", "react-is": "^19.1.1" }, "peerDependencies": { "@types/react": "^17.0.0 || ^18.0.0 || ^19.0.0", "react": "^17.0.0 || ^18.0.0 || ^19.0.0" }, "optionalPeers": ["@types/react"] }, "sha512-/31y4wZqVWa0jzMnzo6JPjxwP6xXy4P3+iLbosFg/mJQowL1KIou0LC+lquWW60FKVbKz5ZUWBg2H3jausa0pw=="],
 
-    "@notionhq/client": ["@notionhq/client@5.16.0", "", {}, "sha512-0mxHJNQBLbcG2Y4+oM+XNySr/3zKtK7FKjWhrUo8TB3WCdwtUMhvuooNmEjOo8NLL9qmKm7cCR4GtEsuTD+SNg=="],
+    "@notionhq/client": ["@notionhq/client@5.26.0", "", {}, "sha512-Oc3438nQ5YmZkVO7YJG8fcTYl0V46CirdCvO33azZ9f7ZfD2rsHE4fUVANJiBB9Xf1sqpCs82nd8oKPxeXLmMg=="],
 
     "@popperjs/core": ["@popperjs/core@2.11.8", "", {}, "sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A=="],
 
