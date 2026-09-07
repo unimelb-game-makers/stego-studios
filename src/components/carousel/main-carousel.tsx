@@ -5,9 +5,9 @@ const MainCarousel = () => {
     <div className='embla carousel'>
       <BaseCarousel
         images={[
-          "/images/image_one.jpg",
-          "/images/image_two.jpg",
-          "/images/image_three.jpg",
+          "/images/the-last-diner.png",
+          "/images/banners/trackline.png",
+          "/images/banners/noelles_ark.png",
         ]}
         viewportClass="embla__viewport"
         containerClass="embla__container"

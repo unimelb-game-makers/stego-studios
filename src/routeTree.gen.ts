@@ -12,7 +12,9 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as LayoutImport } from './routes/_layout'
+import { Route as DevlogIndexImport } from './routes/devlog/index'
 import { Route as LayoutIndexImport } from './routes/_layout/index'
+import { Route as DevlogIdImport } from './routes/devlog/$id'
 import { Route as LayoutContactImport } from './routes/_layout/contact'
 import { Route as LayoutTeamIndexImport } from './routes/_layout/team/index'
 import { Route as LayoutGamesIndexImport } from './routes/_layout/games/index'
@@ -26,10 +28,22 @@ const LayoutRoute = LayoutImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const DevlogIndexRoute = DevlogIndexImport.update({
+  id: '/devlog/',
+  path: '/devlog/',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const LayoutIndexRoute = LayoutIndexImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => LayoutRoute,
+} as any)
+
+const DevlogIdRoute = DevlogIdImport.update({
+  id: '/devlog/$id',
+  path: '/devlog/$id',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const LayoutContactRoute = LayoutContactImport.update({
@@ -79,6 +93,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/contact'
       preLoaderRoute: typeof LayoutContactImport
       parentRoute: typeof LayoutImport
+    }
+    '/devlog/$id': {
+      id: '/devlog/$id'
+      path: '/devlog/$id'
+      fullPath: '/devlog/$id'
+      preLoaderRoute: typeof DevlogIdImport
+      parentRoute: typeof rootRoute
     }
     '/_layout/': {
       id: '/_layout/'
@@ -144,6 +165,7 @@ const LayoutRouteWithChildren =
 export interface FileRoutesByFullPath {
   '': typeof LayoutRouteWithChildren
   '/contact': typeof LayoutContactRoute
+  '/devlog/$id': typeof DevlogIdRoute
   '/': typeof LayoutIndexRoute
   '/games/$slug': typeof LayoutGamesSlugRoute
   '/games': typeof LayoutGamesIndexRoute
@@ -153,6 +175,7 @@ export interface FileRoutesByFullPath {
 
 export interface FileRoutesByTo {
   '/contact': typeof LayoutContactRoute
+  '/devlog/$id': typeof DevlogIdRoute
   '/': typeof LayoutIndexRoute
   '/games/$slug': typeof LayoutGamesSlugRoute
   '/games': typeof LayoutGamesIndexRoute
@@ -164,6 +187,7 @@ export interface FileRoutesById {
   __root__: typeof rootRoute
   '/_layout': typeof LayoutRouteWithChildren
   '/_layout/contact': typeof LayoutContactRoute
+  '/devlog/$id': typeof DevlogIdRoute
   '/_layout/': typeof LayoutIndexRoute
   '/_layout/games/$slug': typeof LayoutGamesSlugRoute
   '/_layout/games/': typeof LayoutGamesIndexRoute
@@ -176,6 +200,7 @@ export interface FileRouteTypes {
   fullPaths:
     | ''
     | '/contact'
+    | '/devlog/$id'
     | '/'
     | '/games/$slug'
     | '/games'
@@ -184,6 +209,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/contact'
+    | '/devlog/$id'
     | '/'
     | '/games/$slug'
     | '/games'
@@ -193,6 +219,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/_layout'
     | '/_layout/contact'
+    | '/devlog/$id'
     | '/_layout/'
     | '/_layout/games/$slug'
     | '/_layout/games/'
@@ -203,10 +230,14 @@ export interface FileRouteTypes {
 
 export interface RootRouteChildren {
   LayoutRoute: typeof LayoutRouteWithChildren
+  DevlogIdRoute: typeof DevlogIdRoute
+  DevlogIndexRoute: typeof DevlogIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   LayoutRoute: LayoutRouteWithChildren,
+  DevlogIdRoute: DevlogIdRoute,
+  DevlogIndexRoute: DevlogIndexRoute,
 }
 
 export const routeTree = rootRoute
@@ -219,7 +250,9 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/_layout"
+        "/_layout",
+        "/devlog/$id",
+        "/devlog/"
       ]
     },
     "/_layout": {
@@ -236,6 +269,9 @@ export const routeTree = rootRoute
     "/_layout/contact": {
       "filePath": "_layout/contact.tsx",
       "parent": "/_layout"
+    },
+    "/devlog/$id": {
+      "filePath": "devlog/$id.tsx"
     },
     "/_layout/": {
       "filePath": "_layout/index.tsx",
