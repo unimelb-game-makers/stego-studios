@@ -108,6 +108,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutIndexImport
       parentRoute: typeof LayoutImport
     }
+    '/devlog/': {
+      id: '/devlog/'
+      path: '/devlog'
+      fullPath: '/devlog'
+      preLoaderRoute: typeof DevlogIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/_layout/games/$slug': {
       id: '/_layout/games/$slug'
       path: '/games/$slug'
@@ -167,6 +174,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof LayoutContactRoute
   '/devlog/$id': typeof DevlogIdRoute
   '/': typeof LayoutIndexRoute
+  '/devlog': typeof DevlogIndexRoute
   '/games/$slug': typeof LayoutGamesSlugRoute
   '/games': typeof LayoutGamesIndexRoute
   '/team': typeof LayoutTeamIndexRoute
@@ -177,6 +185,7 @@ export interface FileRoutesByTo {
   '/contact': typeof LayoutContactRoute
   '/devlog/$id': typeof DevlogIdRoute
   '/': typeof LayoutIndexRoute
+  '/devlog': typeof DevlogIndexRoute
   '/games/$slug': typeof LayoutGamesSlugRoute
   '/games': typeof LayoutGamesIndexRoute
   '/team': typeof LayoutTeamIndexRoute
@@ -189,6 +198,7 @@ export interface FileRoutesById {
   '/_layout/contact': typeof LayoutContactRoute
   '/devlog/$id': typeof DevlogIdRoute
   '/_layout/': typeof LayoutIndexRoute
+  '/devlog/': typeof DevlogIndexRoute
   '/_layout/games/$slug': typeof LayoutGamesSlugRoute
   '/_layout/games/': typeof LayoutGamesIndexRoute
   '/_layout/team/': typeof LayoutTeamIndexRoute
@@ -202,6 +212,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/devlog/$id'
     | '/'
+    | '/devlog'
     | '/games/$slug'
     | '/games'
     | '/team'
@@ -211,6 +222,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/devlog/$id'
     | '/'
+    | '/devlog'
     | '/games/$slug'
     | '/games'
     | '/team'
@@ -221,6 +233,7 @@ export interface FileRouteTypes {
     | '/_layout/contact'
     | '/devlog/$id'
     | '/_layout/'
+    | '/devlog/'
     | '/_layout/games/$slug'
     | '/_layout/games/'
     | '/_layout/team/'
@@ -276,6 +289,9 @@ export const routeTree = rootRoute
     "/_layout/": {
       "filePath": "_layout/index.tsx",
       "parent": "/_layout"
+    },
+    "/devlog/": {
+      "filePath": "devlog/index.tsx"
     },
     "/_layout/games/$slug": {
       "filePath": "_layout/games/$slug.tsx",
