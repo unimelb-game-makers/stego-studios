@@ -4,9 +4,10 @@
 	"type": "module",
 	"scripts": {
 		"sync:games": "bun scripts/sync-games.mjs",
-		"dev": "bun run sync:games && vite --port 3000",
-		"start": "bun run sync:games && vite --port 3000",
-		"build": "bun run sync:games && vite build && tsc",
+		"sync:members": "bun scripts/sync-members.mjs",
+		"dev": "bun run sync:games && bun run sync:members && vite --port 3000",
+		"start": "bun run sync:games && bun run sync:members && vite --port 3000",
+		"build": "bun run sync:games && bun run sync:members && vite build && tsc",
 		"serve": "vite preview",
 		"test": "vitest run"
 	},

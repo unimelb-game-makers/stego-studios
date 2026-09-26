@@ -1,0 +1,510 @@
+{
+  "Team Aqua": [
+    {
+      "name": "Kroger",
+      "role": "Game Designer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "huiyih1@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Jule Valendo Halim",
+      "role": "Game Designer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "julevalendoh@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Leo Liu",
+      "role": "Programmer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "leo.zhen331@gmail.com"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Yusuf Tagra",
+      "role": "Programmer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "yusuftugra1115@gmail.com"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Steven / Hieu",
+      "role": "Programmer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "hieu24a4@gmail.com"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Bill Zhu",
+      "role": "Programmer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "kailiangz@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Betty Zhao",
+      "role": "Artist (2D)",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "fangyuanzhao@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Dora",
+      "role": "Artist (2D)",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "doraradi29@gmail.com"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Xi Chen",
+      "role": "UX Designer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "xc13@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Marcie Di Bartolomeo",
+      "role": "Narrative Designer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "mdibartolome@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Nikitas Papapanagiotou",
+      "role": "Music Composer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "nikitaspapapanagiotou@gmail.com"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "William Huang",
+      "role": "Music Composer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "williamhuang@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Zimo",
+      "role": "Producer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "zilee@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    }
+  ],
+  "Team Magma": [
+    {
+      "name": "Blake",
+      "role": "Game Designer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "blakeca@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Gabriel Chan",
+      "role": "Game Designer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "gerotix.gaming.plays@gmail.com"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "James Mingchong Li",
+      "role": "Programmer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "mingchong.li@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Qingying (Ellen) Lyu",
+      "role": "Programmer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "qllyu@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "William Alexander Tang Wai",
+      "role": "Programmer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "wtangwai@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Peiyu Wang (Vincent)",
+      "role": "Programmer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "peiyuw2@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Angela (Chaoqi Huang)",
+      "role": "Artist (3D)",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "chaoqih1@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Riya Baldawa",
+      "role": "Artist (2D / 3D)",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "riyabaldawa7@gmail.com"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Xilei Zhao",
+      "role": "Artist (3D)",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "xilei.zhao@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Audrey",
+      "role": "UX Designer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "audwang@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Jasper McDowell",
+      "role": "Narrative Designer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "jmcdowell@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Trevor",
+      "role": "Music Composer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "tadelson@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Alex Wang",
+      "role": "Producer",
+      "skills": [],
+      "contact": [],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Ryan Kitchen",
+      "role": "Producer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "rkitchen@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    }
+  ],
+  "Team Rocket": [
+    {
+      "name": "William Zhang",
+      "role": "Game Designer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "wizhang1@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Acalapati Priyatama",
+      "role": "Game Designer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "acalapati.p@gmail.com"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Rachel Liu",
+      "role": "Programmer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "rachel.liu1@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Loki",
+      "role": "Programmer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "lokhymnc@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Jun Yeo",
+      "role": "Programmer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "yeojy@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Alannah Kotvas",
+      "role": "Artist",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "akotvas@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Ruojia He",
+      "role": "Artist",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "ruojiah@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Ni Xi",
+      "role": "Artist",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "luhuala.v@gmail.com"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Lyra",
+      "role": "UX Designer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "leirup@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Christopher Wesley Lesmana",
+      "role": "Narrative Designer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "lesmanaw2013@gmail.com"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Meryl Gogolashvili",
+      "role": "Music Composer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "mgogolashvil@student.unimelb.edu.au"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    },
+    {
+      "name": "Ethan Hall",
+      "role": "Producer",
+      "skills": [],
+      "contact": [
+        {
+          "type": "email",
+          "content": "hall.ethan.au@gmail.com"
+        }
+      ],
+      "description": "",
+      "personalNote": ""
+    }
+  ]
+}
