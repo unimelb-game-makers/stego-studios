@@ -1,12 +1,12 @@
-import type { LinkProps } from "@tanstack/react-router";
-
 interface GameGifData {
   title: string;
   description: string;
 }
 
 interface Game {
-  linkProps: LinkProps;
+  id: string;
+  notionUrl: string;
+  slug: string;
   title: string;
   tags: string[];
   team: string;
@@ -16,6 +16,12 @@ interface Game {
   gifStory: GameGifData;
   image: string;
   presskitUrl?: string;
+  gameUrl?: string;
+  platform?: string;
+  status?: string;
+  startDate?: string;
+  releaseDate?: string;
+  order: number;
 }
 
-export { type Game }
+export { type Game };

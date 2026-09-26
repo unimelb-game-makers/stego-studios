@@ -1,0 +1,28 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  notify:
+    name: Send Discord Notification
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Discord webhook
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          RELEASE_BODY: ${{ github.event.release.body }}
+          RELEASE_URL: ${{ github.event.release.html_url }}
+        run: |
+          payload=$(jq -n \
+            --arg title "Stego Studios Website Release: $RELEASE_TAG" \
+            --arg description "$RELEASE_BODY" \
+            --arg url "$RELEASE_URL" \
+            --argjson color 6860870 \
+            '{embeds: [{title: $title, description: $description, url: $url, color: $color}]}')
+          curl -s -X POST "$DISCORD_WEBHOOK" \
+            -H "Content-Type: application/json" \
+            -d "$payload"

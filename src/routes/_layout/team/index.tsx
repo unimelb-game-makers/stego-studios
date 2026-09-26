@@ -11,7 +11,7 @@ function RouteComponent() {
 	return (
 		<div>
 			<div className="group-photo">
-				<img src="/images/group_photo.jpg" alt="group-photo"></img>
+				<img src="/stego_banner.png" alt="stego-banner"></img>
 			</div>
 			<div className="green"></div>
 			<div className="information">

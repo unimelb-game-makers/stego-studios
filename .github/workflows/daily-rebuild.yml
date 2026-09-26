@@ -1,0 +1,14 @@
+name: Daily Rebuild
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # midnight UTC every day
+  workflow_dispatch: # allow manual trigger from GitHub UI
+
+jobs:
+  rebuild:
+    name: Trigger Render Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger deploy hook
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
